@@ -1,0 +1,45 @@
+page-historiador {
+
+  :root {
+    --ion-safe-area-top: 2px;
+    --ion-safe-area-bottom: 2px;
+  }
+
+  .grid {
+    padding: 1px;
+  }
+
+  ion-col > div {
+    background-color: #f7f7f7;
+    border: solid 1px #ddd;
+    padding: 8px;
+  }
+
+  ion-row > div {
+    background-color: #f7f7f7;
+    border: solid 1px #ddd;
+    padding: 8px;
+  }
+     
+  .scroll-content {
+    padding-top: 60px;
+  }
+
+  .botaoTransparente {
+    opacity: 0.3;
+  }
+
+  .botaoNormal {
+    opacity: 1.0;
+  }
+
+  .divComFab {
+    width: auto;
+    // margin: 10px 0 0 0;
+    margin: auto;
+    background: rgba(237, 237, 222, 0.0);
+    min-height: 80px;
+    padding: 12px;
+  }
+
+}

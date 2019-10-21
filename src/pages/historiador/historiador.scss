@@ -9,6 +9,7 @@ page-historiador {
     padding: 1px;
   }
 
+  
   ion-col > div {
     background-color: #f7f7f7;
     border: solid 1px #ddd;
@@ -24,6 +25,7 @@ page-historiador {
   .scroll-content {
     padding-top: 60px;
   }
+  
 
   .botaoTransparente {
     opacity: 0.3;
@@ -40,6 +42,86 @@ page-historiador {
     background: rgba(237, 237, 222, 0.0);
     min-height: 80px;
     padding: 12px;
+    background-color: transparent; 
+    border: none; 
+    padding-top: 25px
+  }
+
+  .textoCorNeutro {
+    color: red;
+  }
+
+  .textoCorArtDeco {
+    color: yellowgreen;
+  }
+
+  .textoCorArtNoveau {
+    color: blueviolet;
+  }
+
+  .textoFonteNeutro {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .textoFonteArtDeco {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .textoFonteArtNoveau {
+    font-family: Courier, "Lucida Console", monospace;
+  }
+
+  .imagemNeutro {
+    content: url('/assets/imgs/logo.png');
+  }
+
+  .imagemArtDeco {
+    content: url('/assets/imgs/imagemArtDeco.jpg');
+  }
+
+  .imagemArtNoveau {
+    content: url('/assets/imgs/imagemArtNoveau.jpg');
+  }
+
+  .layoutArtDeco {
+    position: relative;
+    animation-name: artDeco;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes artDeco {
+    0%   {left:0px;}
+    50%  {left:200px;}
+    100% {left:0px;}
+  }
+
+  .botaoDeCor {
+    opacity: 1;
+  }
+
+  .opacidadeBotao50 {
+    opacity: 0.5;
+  }
+
+  .balaoDeDialogo {
+    content: url('/assets/imgs/balaoDeDialogo.png');
+  }
+
+  .balaoDeDialogoArtDeco {
+    content: url('/assets/imgs/balaoDeDialogoArtDeco.png');
+  }
+
+  .balaoDeDialogoArtNoveau {
+    content: url('/assets/imgs/balaoDeDialogoArtNoveau.png');
+  }
+
+  .balaoDeDialogoBauhaus {
+    content: url('/assets/imgs/balaoDeDialogoBauhaus.png');
+  }
+
+  .balaoDeDialogoPopArt {
+    content: url('/assets/imgs/balaoDeDialogoPopArt.png');
   }
 
 }

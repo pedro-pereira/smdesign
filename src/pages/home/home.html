@@ -1,21 +1,41 @@
+<!--
 <ion-header>
-  <!--
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>(LOGO) Saiba Mais Design</ion-title>
   </ion-navbar>
--->
 </ion-header>
+-->
 
 <ion-content padding>
-  <h3>Tela Inicial</h3>
+  <div>
+    <h3 class="titulo">Saiba Mais Design</h3>
+  </div>
 
-  <p>
-    Breve introdução e contextualização do "Saiba Mais Design".
-  </p>
+  <div class="container">
+    
+      <div class="colunaLinhaTempo">
+        <iframe
+          src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1T_EAM-A8DV8XiUC3y9VTxo5C-3ETbgYHwhFfMQtdQ8k&font=Default&lang=en&initial_zoom=2'
+          width='100%' height='500vh' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'>
+        </iframe>
+      </div>
 
-  <button ion-button (click)="openPage()">Ir para o site</button>
+      <div div class="colunaTextoExplicativo">
+        Esse aplicativo é sobre design... blá blá blá
+      </div>
+
+  </div>
+
+  <div class="container">
+    <div class="colunaBotaoCredito">
+      <button ion-button (click)="abrirPaginaCreditos()">Créditos</button>
+    </div>
+    <div class="colunaBotaoIniciar">
+      <button ion-button (click)="abrirAplicacao()">Iniciar</button>
+    </div>
+  </div>
 
 </ion-content>

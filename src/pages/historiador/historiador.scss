@@ -9,24 +9,23 @@ page-historiador {
     padding: 1px;
   }
 
-  
   ion-col > div {
     background-color: #f7f7f7;
     border: solid 1px #ddd;
-    padding: 8px;
+    padding: 0px;
   }
 
   ion-row > div {
     background-color: #f7f7f7;
     border: solid 1px #ddd;
-    padding: 8px;
+    padding: 0px;
   }
      
   .scroll-content {
-    padding-top: 60px;
+    padding-top: 0px;
+    padding-bottom: 16px;
   }
   
-
   .botaoTransparente {
     opacity: 0.3;
   }
@@ -35,52 +34,102 @@ page-historiador {
     opacity: 1.0;
   }
 
+  .fab[mini] {
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
+  }
+
+  .botaoDeCor {
+    opacity: 1;
+  }
+
+  .botaoPaletaCores {
+    content: url('/assets/imgs/botaoPaletaCores.png');
+  }
+
+  .botaoTipografia {
+    content: url('/assets/imgs/botaoTipografia.png');
+  }
+
+  .botaoVoltar {
+    width: 25%;
+    height: 25%;
+    content: url('/assets/imgs/botaoVoltar.png');
+  }
+
+  .botaoAleatorio {
+    width: 50%;
+    height: 50%;
+    content: url('/assets/imgs/botaoAleatorio.png');
+  }
+
+  .botaoReiniciar {
+    width: 50%;
+    height: 50%;
+    content: url('/assets/imgs/botaoVoltar.png');
+  }
+
   .divComFab {
     width: auto;
-    // margin: 10px 0 0 0;
     margin: auto;
     background: rgba(237, 237, 222, 0.0);
     min-height: 80px;
-    padding: 12px;
     background-color: transparent; 
-    border: none; 
-    padding-top: 25px
+    border: none;
+    /*
+    padding: 12px;
+    padding-top: 25px;
+    */
   }
 
+  .opacidadeBotao50 {
+    opacity: 0.5;
+  }
+
+ 
+  // -------------- ESTILO NEUTRO ----------------
   .textoCorNeutro {
     color: red;
-  }
-
-  .textoCorArtDeco {
-    color: yellowgreen;
-  }
-
-  .textoCorArtNoveau {
-    color: blueviolet;
   }
 
   .textoFonteNeutro {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .textoFonteArtDeco {
-    font-family: "Times New Roman", Times, serif;
-  }
-
-  .textoFonteArtNoveau {
-    font-family: Courier, "Lucida Console", monospace;
-  }
-
   .imagemNeutro {
     content: url('/assets/imgs/logo.png');
   }
 
-  .imagemArtDeco {
-    content: url('/assets/imgs/imagemArtDeco.jpg');
+  .balaoDeDialogo {
+    content: url('/assets/imgs/balaoDeDialogo.png');
   }
 
-  .imagemArtNoveau {
-    content: url('/assets/imgs/imagemArtNoveau.jpg');
+
+  // -------------- ART DECO ----------------
+
+  .balaoDeDialogoArtDeco {
+    content: url('/assets/imgs/balaoDeDialogoArtDeco.png');
+  }
+
+  .botaoArtDeco {
+    content: url('/assets/imgs/botaoArtDeco.png');
+  }
+
+  .fab-close-active[artDeco] .fab-close-icon {
+    content: url('/assets/imgs/botaoArtDeco.png');
+  }
+
+  .textoCorArtDeco {
+    color: yellowgreen;
+  }
+
+  .textoFonteArtDeco {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .imagemArtDeco {
+    content: url('/assets/imgs/imagemArtDeco.jpg');
   }
 
   .layoutArtDeco {
@@ -96,32 +145,100 @@ page-historiador {
     100% {left:0px;}
   }
 
-  .botaoDeCor {
-    opacity: 1;
-  }
 
-  .opacidadeBotao50 {
-    opacity: 0.5;
-  }
-
-  .balaoDeDialogo {
-    content: url('/assets/imgs/balaoDeDialogo.png');
-  }
-
-  .balaoDeDialogoArtDeco {
-    content: url('/assets/imgs/balaoDeDialogoArtDeco.png');
-  }
+  // -------------- ART NOVEAU --------------
 
   .balaoDeDialogoArtNoveau {
     content: url('/assets/imgs/balaoDeDialogoArtNoveau.png');
   }
 
+  .botaoArtNoveau {
+    content: url('/assets/imgs/botaoArtNoveau.png');
+  }
+
+  .fab-close-active[artNoveau] .fab-close-icon {
+    content: url('/assets/imgs/botaoArtNoveau.png');
+  }
+
+  .textoCorArtNoveau {
+    color: blueviolet;
+  }
+
+  .textoFonteArtNoveau {
+    font-family: Courier, "Lucida Console", monospace;
+  }
+
+  .imagemArtNoveau {
+    content: url('/assets/imgs/imagemArtNoveau.jpg');
+  }
+
+
+  // -------------- BAUHAUS -----------------
+
   .balaoDeDialogoBauhaus {
     content: url('/assets/imgs/balaoDeDialogoBauhaus.png');
   }
 
+  .botaoBauhaus {
+    content: url('/assets/imgs/botaoBauhaus.png');
+  }
+
+  .fab-close-active[bauhaus] .fab-close-icon {
+    content: url('/assets/imgs/botaoBauhaus.png');
+  }
+
+
+  // -------------- POP ART -----------------
+
   .balaoDeDialogoPopArt {
     content: url('/assets/imgs/balaoDeDialogoPopArt.png');
+  }
+
+  .botaoPopArt {
+    content: url('/assets/imgs/botaoPopArt.png');
+  }
+
+  .fab-close-active[popArt] .fab-close-icon {
+    content: url('/assets/imgs/botaoPopArt.png');
+  }
+
+  // ----------------- HINT -----------------------
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
   }
 
 }

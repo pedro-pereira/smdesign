@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { HistoriadorPage } from '../pages/historiador/historiador';
+import { CreditosPage } from '../pages/creditos/creditos';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    HistoriadorPage
+    HistoriadorPage,
+    CreditosPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    HistoriadorPage
+    HistoriadorPage,
+    CreditosPage
   ],
   providers: [
     StatusBar,

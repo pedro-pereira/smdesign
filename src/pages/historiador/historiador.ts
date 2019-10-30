@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-historiador',
@@ -7,6 +8,8 @@ import { NavController } from 'ionic-angular';
 })
 
 export class HistoriadorPage {
+
+  homePage: any = HomePage;
 
   escola1Tipografia: HTMLElement;
   escola1Layout: HTMLElement;
@@ -17,6 +20,10 @@ export class HistoriadorPage {
   caracteristicasImageticas = ['imagemNeutro', 'layoutNeutro'];
 
   constructor(public navCtrl: NavController) {
+  }
+
+  voltarPaginaInicial() {
+    this.navCtrl.push(this.homePage);
   }
 
   acaoBotaoX() {
@@ -152,6 +159,18 @@ export class HistoriadorPage {
     console.log('aplicaImagemArtNoveau');
     console.log(this.caracteristicasImageticas);
     */
+  }
+
+  // -------------- BAUHAUS --------------
+  exibeDialogoBauhaus() {
+    var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.className = "balaoDeDialogoBauhaus";
+  }
+
+  // -------------- POP ART --------------
+  exibeDialogoPopArt() {
+    var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.className = "balaoDeDialogoPopArt";
   }
 
 }

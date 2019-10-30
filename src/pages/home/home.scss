@@ -1,3 +1,37 @@
 page-home {
 
+    .content-md {
+        background-color: aliceblue;
+    }
+
+    .titulo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        padding: 10px 0 0 0;
+    }
+
+    .colunaLinhaTempo {
+        width: 70%;
+    }
+
+    .colunaTextoExplicativo {
+        width: 30%;
+        padding: 0 0 0 20px;
+    }
+
+    .colunaBotaoCredito {
+        width: 70%;
+        text-align: left;
+    }
+
+    .colunaBotaoIniciar {
+        width: 30%;
+        text-align: right;
+    }
+
 }

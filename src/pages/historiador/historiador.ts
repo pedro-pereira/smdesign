@@ -11,13 +11,10 @@ export class HistoriadorPage {
 
   homePage: any = HomePage;
 
-  escola1Tipografia: HTMLElement;
-  escola1Layout: HTMLElement;
-  escola1Cor: HTMLElement;
-  escola1Acessorios: HTMLElement;
-
-  caracteristicasTextuais = ['textoCorNeutro', 'textoFonteNeutro'];
-  caracteristicasImageticas = ['imagemNeutro', 'layoutNeutro'];
+  caracteristicas        = ["N", "N", "N"];
+  botaoDeCorAtivo        = [1, 1, 1, 1];
+  botaoDeTipografiaAtivo = [1, 1, 1, 1];
+  botaoDeLayoutAtivo     = [1, 1, 1, 1];
 
   constructor(public navCtrl: NavController) {
   }
@@ -36,141 +33,323 @@ export class HistoriadorPage {
 
   // -------------- ART DECO --------------
   exibeDialogoArtDeco() {
+    /*
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.className = "balaoDeDialogoArtDeco";
-  }
-
-  aplicaCorArtDeco() {
-    this.caracteristicasTextuais[0] = "textoCorArtDeco";
-    var todosOsTextos = document.getElementsByClassName('texto');
-    for (var i = 0; i < todosOsTextos.length; i++) {
-      todosOsTextos[i].className = "texto";
-      for (var j = 0; j < this.caracteristicasTextuais.length; j++) {
-        todosOsTextos[i].className += " " + this.caracteristicasTextuais[j];
-      }
-    }
-
-    var todosOsBotoesDeCor = document.getElementsByClassName('botaoDeCor');
-    for (i = 0; i < todosOsBotoesDeCor.length; i++) {
-      todosOsBotoesDeCor[i].classList.add('opacidadeBotao50');
-      console.log(todosOsBotoesDeCor[i].className);
-      console.log(todosOsBotoesDeCor[i].classList);
-
-    }
-    /*
-    console.log('aplicaCorArtDeco');
-    console.log(this.caracteristicasTextuais);
-    console.log(todosOsBotoesDeCor);
-    */
-  }
-
-  aplicaFonteArtDeco() {
-    this.caracteristicasTextuais[1] = "textoFonteArtDeco";
-    var todosOsTextos = document.getElementsByClassName('texto');
-    for (var i = 0; i < todosOsTextos.length; i++) {
-      todosOsTextos[i].className = "texto";
-      for (var j = 0; j < this.caracteristicasTextuais.length; j++) {
-        todosOsTextos[i].className += " " + this.caracteristicasTextuais[j];
-      }
-    }
-    /*
-    console.log('aplicaFonteArtDeco');
-    console.log(this.caracteristicasTextuais);
-    */
-  }
-
-  aplicaImagemArtDeco() {
-    this.caracteristicasImageticas[0] = "imagemArtDeco";
-    var todasAsImagens = document.getElementsByClassName('imagem');
-    for (var i = 0; i < todasAsImagens.length; i++) {
-      todasAsImagens[i].className = "imagem";
-      for (var j = 0; j < this.caracteristicasImageticas.length; j++) {
-        todasAsImagens[i].className += " " + this.caracteristicasImageticas[j];
-      }
-    }
-    /*
-    console.log('aplicaImagemArtDeco');
-    console.log(this.caracteristicasImageticas);
     */
   }
 
   aplicaLayoutArtDeco() {
-    this.caracteristicasImageticas[1] = "layoutArtDeco";
-    var todasAsImagens = document.getElementsByClassName('imagem');
-    for (var i = 0; i < todasAsImagens.length; i++) {
-      todasAsImagens[i].className = "imagem";
-      for (var j = 0; j < this.caracteristicasImageticas.length; j++) {
-        todasAsImagens[i].className += " " + this.caracteristicasImageticas[j];
+    this.caracteristicas[0] = "D";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeLayoutAtivo = [1, 0, 0, 0];
+    for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
+      if(this.botaoDeLayoutAtivo[i] !== 1) {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 1;");
       }
     }
-    /*
-    console.log('aplicaLayoutArtDeco');
-    console.log(this.caracteristicasImageticas);
-    */
+  }
+
+  aplicaCorArtDeco() {
+    this.caracteristicas[1] = "D";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeCorAtivo = [1, 0, 0, 0];
+    for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
+      if(this.botaoDeCorAtivo[i] !== 1) {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+
+  }
+
+  aplicaFonteArtDeco() {
+    this.caracteristicas[2] = "D";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeTipografiaAtivo = [1, 0, 0, 0];
+    for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
+      if(this.botaoDeTipografiaAtivo[i] !== 1) {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
   }
 
   // -------------- ART NOVEAU --------------
   exibeDialogoArtNoveau() {
+    /*
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.className = "balaoDeDialogoArtNoveau";
+    */
+  }
+
+  aplicaLayoutArtNoveau() {
+    this.caracteristicas[0] = "Nv";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeLayoutAtivo = [0, 1, 0, 0];
+    for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
+      if(this.botaoDeLayoutAtivo[i] !== 1) {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
   }
 
   aplicaCorArtNoveau() {
-    this.caracteristicasTextuais[0] = "textoCorArtNoveau";
-    var todosOsTextos = document.getElementsByClassName('texto');
-    for (var i = 0; i < todosOsTextos.length; i++) {
-      todosOsTextos[i].className = "texto";
-      for (var j = 0; j < this.caracteristicasTextuais.length; j++) {
-        todosOsTextos[i].className += " " + this.caracteristicasTextuais[j];
+    this.caracteristicas[1] = "Nv";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    this.botaoDeCorAtivo = [0, 1, 0, 0];
+    for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
+      if(this.botaoDeCorAtivo[i] !== 1) {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 1;");
       }
     }
-    /*
-    console.log('aplicaCorArtNoveau');
-    console.log(this.caracteristicasTextuais);
-    console.log(todosOsBotoesDeCor);
-    */
   }
 
   aplicaFonteArtNoveau() {
-    this.caracteristicasTextuais[1] = "textoFonteArtNoveau";
-    var todosOsTextos = document.getElementsByClassName('texto');
-    for (var i = 0; i < todosOsTextos.length; i++) {
-      todosOsTextos[i].className = "texto";
-      for (var j = 0; j < this.caracteristicasTextuais.length; j++) {
-        todosOsTextos[i].className += " " + this.caracteristicasTextuais[j];
-      }
-    }
-    /*
-    console.log('aplicaFonteArtNoveau');
-    console.log(this.caracteristicasTextuais);
-    */
-  }
+    this.caracteristicas[2] = "Nv";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
 
-  aplicaImagemArtNoveau() {
-    this.caracteristicasImageticas[0] = "imagemArtNoveau";
-    var todasAsImagens = document.getElementsByClassName('imagem');
-    for (var i = 0; i < todasAsImagens.length; i++) {
-      todasAsImagens[i].className = "imagem";
-      for (var j = 0; j < this.caracteristicasImageticas.length; j++) {
-        todasAsImagens[i].className += " " + this.caracteristicasImageticas[j];
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeTipografiaAtivo = [0, 1, 0, 0];
+    for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
+      if(this.botaoDeTipografiaAtivo[i] !== 1) {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 1;");
       }
     }
-    /*
-    console.log('aplicaImagemArtNoveau');
-    console.log(this.caracteristicasImageticas);
-    */
   }
 
   // -------------- BAUHAUS --------------
   exibeDialogoBauhaus() {
+    /*
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.className = "balaoDeDialogoBauhaus";
+    */
+  }
+
+  aplicaLayoutBauhaus() {
+    this.caracteristicas[0] = "B";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeLayoutAtivo = [0, 0, 1, 0];
+    for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
+      if(this.botaoDeLayoutAtivo[i] !== 1) {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+
+  }
+
+  aplicaCorBauhaus() {
+    this.caracteristicas[1] = "B";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    this.botaoDeCorAtivo = [0, 0, 1, 0];
+    for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
+      if(this.botaoDeCorAtivo[i] !== 1) {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+  }
+
+  aplicaFonteBauhaus() {
+    this.caracteristicas[2] = "B";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeTipografiaAtivo = [0, 0, 1, 0];
+    for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
+      if(this.botaoDeTipografiaAtivo[i] !== 1) {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
   }
 
   // -------------- POP ART --------------
   exibeDialogoPopArt() {
+    /*
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.className = "balaoDeDialogoPopArt";
+    */
   }
 
+  aplicaLayoutPopArt() {
+    this.caracteristicas[0] = "P";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeLayoutAtivo = [0, 0, 0, 1];
+    for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
+      if(this.botaoDeLayoutAtivo[i] !== 1) {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+  }
+
+  aplicaCorPopArt() {
+    this.caracteristicas[1] = "P";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    this.botaoDeCorAtivo = [0, 0, 0, 1];
+    for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
+      if(this.botaoDeCorAtivo[i] !== 1) {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+  }
+
+  aplicaFontePopArt() {
+    this.caracteristicas[2] = "P";
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    this.botaoDeTipografiaAtivo = [0, 0, 0, 1];
+    for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
+      if(this.botaoDeTipografiaAtivo[i] !== 1) {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+  }
 }

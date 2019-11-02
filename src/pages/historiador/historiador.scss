@@ -25,14 +25,6 @@ page-historiador {
     padding-top: 0px;
     padding-bottom: 16px;
   }
-  
-  .botaoTransparente {
-    opacity: 0.3;
-  }
-
-  .botaoNormal {
-    opacity: 1.0;
-  }
 
   .fab[mini] {
     width: 100px;
@@ -40,34 +32,32 @@ page-historiador {
     line-height: 40px;
   }
 
-  .botaoDeCor {
-    opacity: 1;
-  }
-
   .botaoPaletaCores {
-    content: url('/assets/imgs/botaoPaletaCores.png');
+    content: url('/assets/imgs/botao-cor.png');
   }
 
   .botaoTipografia {
-    content: url('/assets/imgs/botaoTipografia.png');
+    content: url('/assets/imgs/botao-tipografia.png');
+  }
+
+  .botaoLayout {
+    content: url('/assets/imgs/botao-layout.png');
   }
 
   .botaoVoltar {
-    width: 25%;
-    height: 25%;
     content: url('/assets/imgs/botaoVoltar.png');
   }
 
   .botaoAleatorio {
-    width: 50%;
-    height: 50%;
-    content: url('/assets/imgs/botaoAleatorio.png');
+    content: url('/assets/imgs/botao-aleatorio.png');
   }
 
   .botaoReiniciar {
-    width: 50%;
-    height: 50%;
-    content: url('/assets/imgs/botaoVoltar.png');
+    content: url('/assets/imgs/botao-reiniciar.png');
+  }
+
+  .botaoGaleria {
+    content: url('/assets/imgs/botao-galeria.png');
   }
 
   .divComFab {
@@ -81,28 +71,6 @@ page-historiador {
     padding: 12px;
     padding-top: 25px;
     */
-  }
-
-  .opacidadeBotao50 {
-    opacity: 0.5;
-  }
-
- 
-  // -------------- ESTILO NEUTRO ----------------
-  .textoCorNeutro {
-    color: red;
-  }
-
-  .textoFonteNeutro {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .imagemNeutro {
-    content: url('/assets/imgs/logo.png');
-  }
-
-  .balaoDeDialogo {
-    content: url('/assets/imgs/balaoDeDialogo.png');
   }
 
 
@@ -120,31 +88,6 @@ page-historiador {
     content: url('/assets/imgs/botaoArtDeco.png');
   }
 
-  .textoCorArtDeco {
-    color: yellowgreen;
-  }
-
-  .textoFonteArtDeco {
-    font-family: "Times New Roman", Times, serif;
-  }
-
-  .imagemArtDeco {
-    content: url('/assets/imgs/imagemArtDeco.jpg');
-  }
-
-  .layoutArtDeco {
-    position: relative;
-    animation-name: artDeco;
-    animation-duration: 4s;
-    animation-direction: alternate-reverse;
-  }
-
-  @keyframes artDeco {
-    0%   {left:0px;}
-    50%  {left:200px;}
-    100% {left:0px;}
-  }
-
 
   // -------------- ART NOVEAU --------------
 
@@ -158,18 +101,6 @@ page-historiador {
 
   .fab-close-active[artNoveau] .fab-close-icon {
     content: url('/assets/imgs/botaoArtNoveau.png');
-  }
-
-  .textoCorArtNoveau {
-    color: blueviolet;
-  }
-
-  .textoFonteArtNoveau {
-    font-family: Courier, "Lucida Console", monospace;
-  }
-
-  .imagemArtNoveau {
-    content: url('/assets/imgs/imagemArtNoveau.jpg');
   }
 
 
@@ -240,5 +171,198 @@ page-historiador {
     visibility: visible;
     opacity: 1;
   }
+
+  .objetoDeEstudo {
+    width: 100%;
+    height: 50em;
+  }
+
+/*
+  .esmaecer {
+    animation-name: esmaecer;
+    animation-duration: 4s;
+  }
+
+  @keyframes esmaecer {
+      0% { opacity: 1;   }
+     20% { opacity: 0.9; }
+     40% { opacity: 0.5; }
+     60% { opacity: 0.3; }
+     80% { opacity: 0;   }
+    100% { opacity: 0;   }
+  }  
+*/
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .flex-container > div {
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+// ------------------------ NORMAL ------------------------
+
+// .NNN  { content: url('/assets/imgs/combinacoes/NNN.png'); }
+// .NND  { content: url('/assets/imgs/combinacoes/NND.png'); }
+// .NNNv { content: url('/assets/imgs/combinacoes/NNNv.png');}
+// .NNB  { content: url('/assets/imgs/combinacoes/NNB.png'); }
+// .NNP  { content: url('/assets/imgs/combinacoes/NNP.png'); }
+
+// .NDN  { content: url('/assets/imgs/combinacoes/NDN.png'); }
+// .NDD  { content: url('/assets/imgs/combinacoes/NDD.png'); }
+// .NDNv { content: url('/assets/imgs/combinacoes/NDNv.png');}
+// .NDB  { content: url('/assets/imgs/combinacoes/NDB.png'); }
+// .NDP  { content: url('/assets/imgs/combinacoes/NDP.png'); }
+
+// .NNvN { content: url('/assets/imgs/combinacoes/NNvN.png'); }
+// .NNvD { content: url('/assets/imgs/combinacoes/NNvD.png'); }
+// .NNvNv{ content: url('/assets/imgs/combinacoes/NNvNv.png');}
+// .NNvB { content: url('/assets/imgs/combinacoes/NNvB.png'); }
+// .NNvP { content: url('/assets/imgs/combinacoes/NNvP.png'); }
+
+// .NBN  { content: url('/assets/imgs/combinacoes/NBN.png'); }
+// .NBD  { content: url('/assets/imgs/combinacoes/NBD.png'); }
+// .NBNv { content: url('/assets/imgs/combinacoes/NBNv.png');}
+// .NBB  { content: url('/assets/imgs/combinacoes/NBB.png'); }
+// .NBP  { content: url('/assets/imgs/combinacoes/NBP.png'); }
+
+// .NPN  { content: url('/assets/imgs/combinacoes/NPN.png'); }
+// .NPD  { content: url('/assets/imgs/combinacoes/NPD.png'); }
+// .NPNv { content: url('/assets/imgs/combinacoes/NPNv.png');}
+// .NPB  { content: url('/assets/imgs/combinacoes/NPB.png'); }
+// .NPP  { content: url('/assets/imgs/combinacoes/NPP.png'); }
+
+// ------------------------ DECO ------------------------
+
+.DNN  { content: url('/assets/imgs/combinacoes/DNN.png'); }
+.DND  { content: url('/assets/imgs/combinacoes/DND.png'); }
+// .DNNv { content: url('/assets/imgs/combinacoes/DNNv.png');}
+.DNB  { content: url('/assets/imgs/combinacoes/DNB.png'); }
+.DNP  { content: url('/assets/imgs/combinacoes/DNP.png'); }
+
+.DDN  { content: url('/assets/imgs/combinacoes/DDN.png'); }
+.DDD  { content: url('/assets/imgs/combinacoes/DDD.png'); }
+// .DDNv { content: url('/assets/imgs/combinacoes/DDNv.png');}
+.DDB  { content: url('/assets/imgs/combinacoes/DDB.png'); }
+.DDP  { content: url('/assets/imgs/combinacoes/DDP.png'); }
+
+// .DNvN { content: url('/assets/imgs/combinacoes/DNvN.png'); }
+// .DNvD { content: url('/assets/imgs/combinacoes/DNvD.png'); }
+// .DNvNv{ content: url('/assets/imgs/combinacoes/DNvNv.png');}
+// .DNvB { content: url('/assets/imgs/combinacoes/DNvB.png'); }
+// .DNvP { content: url('/assets/imgs/combinacoes/DNvP.png'); }
+
+.DBN  { content: url('/assets/imgs/combinacoes/DBN.png'); }
+.DBD  { content: url('/assets/imgs/combinacoes/DBD.png'); }
+// .DBNv { content: url('/assets/imgs/combinacoes/DBNv.png');}
+.DBB  { content: url('/assets/imgs/combinacoes/DBB.png'); }
+.DBP  { content: url('/assets/imgs/combinacoes/DBP.png'); }
+
+.DPN  { content: url('/assets/imgs/combinacoes/DPN.png'); }
+.DPD  { content: url('/assets/imgs/combinacoes/DPD.png'); }
+// .DPNv { content: url('/assets/imgs/combinacoes/DPNv.png');}
+.DPB  { content: url('/assets/imgs/combinacoes/DPB.png'); }
+.DPP  { content: url('/assets/imgs/combinacoes/DPP.png'); }
+
+// ------------------------ NOVEAU ------------------------
+
+// .NvNN { content: url('/assets/imgs/combinacoes/NvNN.png'); }
+// .NvND { content: url('/assets/imgs/combinacoes/NvND.png'); }
+// .NvNNv{ content: url('/assets/imgs/combinacoes/NvNNv.png');}
+// .NvNB { content: url('/assets/imgs/combinacoes/NvNB.png'); }
+// .NvNP { content: url('/assets/imgs/combinacoes/NvNP.png'); }
+
+// .NvDN { content: url('/assets/imgs/combinacoes/NvDN.png'); }
+// .NvDD { content: url('/assets/imgs/combinacoes/NvDD.png'); }
+// .NvDNv{ content: url('/assets/imgs/combinacoes/NvDNv.png');}
+// .NvDB { content: url('/assets/imgs/combinacoes/NvDB.png'); }
+// .NvDP { content: url('/assets/imgs/combinacoes/NvDP.png'); }
+
+// .NvNvN { content: url('/assets/imgs/combinacoes/NvNvN.png'); }
+// .NvNvD { content: url('/assets/imgs/combinacoes/NvNvD.png'); }
+// .NvNvNv{ content: url('/assets/imgs/combinacoes/NvNvNv.png');}
+// .NvNvB { content: url('/assets/imgs/combinacoes/NvNvB.png'); }
+// .NvNvP { content: url('/assets/imgs/combinacoes/NvNvP.png'); }
+
+// .NvBN  { content: url('/assets/imgs/combinacoes/NvBN.png'); }
+// .NvBD  { content: url('/assets/imgs/combinacoes/NvBD.png'); }
+// .NvBNv { content: url('/assets/imgs/combinacoes/NvBNv.png');}
+// .NvBB  { content: url('/assets/imgs/combinacoes/NvBB.png'); }
+// .NvBP  { content: url('/assets/imgs/combinacoes/NvBP.png'); }
+
+// .NvPN  { content: url('/assets/imgs/combinacoes/NvPN.png'); }
+// .NvPD  { content: url('/assets/imgs/combinacoes/NvPD.png'); }
+// .NvPNv { content: url('/assets/imgs/combinacoes/NvPNv.png');}
+// .NvPB  { content: url('/assets/imgs/combinacoes/NvPB.png'); }
+// .NvPP  { content: url('/assets/imgs/combinacoes/NvPP.png'); }
+
+// ------------------------ BAUHAUS ------------------------
+
+.BNN  { content: url('/assets/imgs/combinacoes/BNN.png'); }
+.BND  { content: url('/assets/imgs/combinacoes/BND.png'); }
+// .BNNv { content: url('/assets/imgs/combinacoes/BNNv.png');}
+.BNB  { content: url('/assets/imgs/combinacoes/BNB.png'); }
+.BNP  { content: url('/assets/imgs/combinacoes/BNP.png'); }
+
+.BDN  { content: url('/assets/imgs/combinacoes/BDN.png'); }
+.BDD  { content: url('/assets/imgs/combinacoes/BDD.png'); }
+// .BDNv { content: url('/assets/imgs/combinacoes/BDNv.png');}
+.BDB  { content: url('/assets/imgs/combinacoes/BDB.png'); }
+.BDP  { content: url('/assets/imgs/combinacoes/BDP.png'); }
+
+// .BNvN { content: url('/assets/imgs/combinacoes/BNvN.png'); }
+// .BNvD { content: url('/assets/imgs/combinacoes/BNvD.png'); }
+// .BNvNv{ content: url('/assets/imgs/combinacoes/BNvNv.png');}
+// .BNvB { content: url('/assets/imgs/combinacoes/BNvB.png'); }
+// .BNvP { content: url('/assets/imgs/combinacoes/BNvP.png'); }
+
+.BBN  { content: url('/assets/imgs/combinacoes/BBN.png'); }
+.BBD  { content: url('/assets/imgs/combinacoes/BBD.png'); }
+// .BBNv { content: url('/assets/imgs/combinacoes/BBNv.png');}
+.BBB  { content: url('/assets/imgs/combinacoes/BBB.png'); }
+.BBP  { content: url('/assets/imgs/combinacoes/BBP.png'); }
+
+.BPN  { content: url('/assets/imgs/combinacoes/BPN.png'); }
+.BPD  { content: url('/assets/imgs/combinacoes/BPD.png'); }
+// .BPNv { content: url('/assets/imgs/combinacoes/BPNv.png');}
+.BPB  { content: url('/assets/imgs/combinacoes/BPB.png'); }
+.BPP  { content: url('/assets/imgs/combinacoes/BPP.png'); }
+
+// ------------------------ POP ART ------------------------
+
+.PNN  { content: url('/assets/imgs/combinacoes/PNN.png'); }
+.PND  { content: url('/assets/imgs/combinacoes/PND.png'); }
+// .PNNv { content: url('/assets/imgs/combinacoes/PNNv.png');}
+.PNB  { content: url('/assets/imgs/combinacoes/PNB.png'); }
+.PNP  { content: url('/assets/imgs/combinacoes/PNP.png'); }
+
+.PDN  { content: url('/assets/imgs/combinacoes/PDN.png'); }
+.PDD  { content: url('/assets/imgs/combinacoes/PDD.png'); }
+// .PDNv { content: url('/assets/imgs/combinacoes/PDNv.png');}
+.PDB  { content: url('/assets/imgs/combinacoes/PDB.png'); }
+.PDP  { content: url('/assets/imgs/combinacoes/PDP.png'); }
+
+// .PNvN { content: url('/assets/imgs/combinacoes/PNvN.png'); }
+// .PNvD { content: url('/assets/imgs/combinacoes/PNvD.png'); }
+// .PNvNv{ content: url('/assets/imgs/combinacoes/PNvNv.png');}
+// .PNvB { content: url('/assets/imgs/combinacoes/PNvB.png'); }
+// .PNvP { content: url('/assets/imgs/combinacoes/PNvP.png'); }
+
+.PBN  { content: url('/assets/imgs/combinacoes/PBN.png'); }
+.PBD  { content: url('/assets/imgs/combinacoes/PBD.png'); }
+// .PBNv { content: url('/assets/imgs/combinacoes/PBNv.png');}
+.PBB  { content: url('/assets/imgs/combinacoes/PBB.png'); }
+.PBP  { content: url('/assets/imgs/combinacoes/PBP.png'); }
+
+.PPN  { content: url('/assets/imgs/combinacoes/PPN.png'); }
+.PPD  { content: url('/assets/imgs/combinacoes/PPD.png'); }
+// .PPNv { content: url('/assets/imgs/combinacoes/PPNv.png');}
+.PPB  { content: url('/assets/imgs/combinacoes/PPB.png'); }
+.PPP  { content: url('/assets/imgs/combinacoes/PPP.png'); }
 
 }

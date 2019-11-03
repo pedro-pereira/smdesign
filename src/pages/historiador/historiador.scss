@@ -97,6 +97,7 @@ page-historiador {
 
   .botaoArtNoveau {
     content: url('/assets/imgs/botaoArtNoveau.png');
+
   }
 
   .fab-close-active[artNoveau] .fab-close-icon {
@@ -208,6 +209,20 @@ page-historiador {
   }
 
 /*Botoes de baixo*/
+  .botaoCelula{
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+  }
+
+  .botaoCelula{
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+  }
+
   #celulaBotaoAleatorio{
     position: absolute;
     left: 7vw;
@@ -216,6 +231,12 @@ page-historiador {
   }
   #celulaBotaoReiniciar{
     
+    z-index: 1;
+
+  }
+  #celulaBotaoGaleria{
+    position: absolute;
+    left: 13.5vw;
     z-index: 1;
 
   }
@@ -246,8 +267,10 @@ page-historiador {
     text-align: center;
   }
 
-  #carregamento{
-    display: none;
+
+  .sombraEscolas{
+    box-shadow: 0px 7px 10px black;
+
   }
 
 

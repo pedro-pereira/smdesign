@@ -1,0 +1,23 @@
+page-galeria {
+
+  .slide-zoom {
+    height: 100%;
+  }
+
+  .slide-image {
+    height: 100%;
+    width: 75%;
+  }
+
+  .botaoVoltar {
+    scale: 0.5;
+    content: url('/assets/imgs/botao-voltar.png');
+    position: absolute;
+  }
+
+  .swiper-slide {
+    margin: 0px;
+    padding: 0px;
+  }
+
+}

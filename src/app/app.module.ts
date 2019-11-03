@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 
 import { HistoriadorPage } from '../pages/historiador/historiador';
 import { CreditosPage } from '../pages/creditos/creditos';
+import { GaleriaPage } from '../pages/galeria/galeria';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     HistoriadorPage,
-    CreditosPage
+    CreditosPage,
+    GaleriaPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     HistoriadorPage,
-    CreditosPage
+    CreditosPage,
+    GaleriaPage
   ],
   providers: [
     StatusBar,

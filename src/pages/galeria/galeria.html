@@ -1,0 +1,33 @@
+<!--
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>(LOGO) Saiba Mais Design</ion-title>
+  </ion-navbar>
+</ion-header>
+-->
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-1>
+        <button (click)="voltarPaginaHistoriador()" style="background: transparent;">
+          <ion-icon class="botaoVoltar"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col col-11>
+        <ion-slides pager>
+          <ion-slide *ngFor="let slide of slides">
+            <img [src]="slide.image" class="slide-image" />
+            <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+            <p [innerHTML]="slide.description"></p>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

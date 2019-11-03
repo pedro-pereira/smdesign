@@ -1,8 +1,28 @@
 page-creditos {
 
+  .content-md {
+    background-color: #3D5971;
+  }
+
+  .titulo {
+    content: url('/assets/imgs/creditos-titulo.png');
+    margin-left: 40%;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .texto {
+    content: url('/assets/imgs/creditos-texto.png');
+    margin-left: 18%;
+    margin-top: 0px;
+    padding-top: 0px;
+    transform: scale(0.75);
+  }
+
   .botaoVoltar {
     scale: 0.5;
-    content: url('/assets/imgs/botaoVoltar.png');
+    content: url('/assets/imgs/botao-voltar.png');
+    position: absolute;
   }
 
 }

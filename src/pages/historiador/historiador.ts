@@ -22,7 +22,6 @@ export class HistoriadorPage {
 
   }
 
-
   voltarPaginaInicial() {
     this.navCtrl.push(this.homePage);
   }
@@ -38,8 +37,6 @@ export class HistoriadorPage {
   abrirGaleria() {
     this.navCtrl.push(this.galeriaPage);
   }
-
-
 
   // -------------- ART DECO --------------
   exibeDialogoArtDeco() {
@@ -91,7 +88,6 @@ export class HistoriadorPage {
   }
 
   aplicaCorArtDeco() {
-
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-1").style.opacity != "1") {
       document.getElementById("objetoDeEstudo").animate([
@@ -131,31 +127,6 @@ export class HistoriadorPage {
       }
     }
   }
-}
-
-aplicaFonteArtDeco() {
-  // Linha abaixo só permite clicar quando não já está clicado
-  if(document.getElementById("escola-tipografia-1").style.opacity!=1){
-    document.getElementById("objetoDeEstudo").animate([ 
-      {opacity:1},
-      // Tempo de fadeOut
-      {opacity:0}], 500);
-    // Timeout para que a tela só mude quando a opacidade esteja em 0 
-    setTimeout( () => {
-
-      document.getElementById("objetoDeEstudo").animate([ 
-        {opacity:0},
-        // Tempo de fadeIn
-        {opacity:1}],  2000 );
-
-
-      this.caracteristicas[2] = "D";
-      var objetoDeEstudo = document.getElementById('objetoDeEstudo');
-      var sufixo = "";
-
-      for (var i = 0; i < this.caracteristicas.length; i++) {
-        sufixo += this.caracteristicas[i];
-      }
 
   aplicaFonteArtDeco() {
     // Linha abaixo só permite clicar quando não já está clicado
@@ -196,7 +167,6 @@ aplicaFonteArtDeco() {
       }
     }
   }
-}
 
   // -------------- ART NOVEAU --------------
   exibeDialogoArtNoveau() {
@@ -408,22 +378,6 @@ aplicaFonteArtDeco() {
       }
     }
   }
-}
-
-aplicaFonteBauhaus() {
-// Linha abaixo só permite clicar quando não já está clicado
-if(document.getElementById("escola-tipografia-3").style.opacity!=1){
- document.getElementById("objetoDeEstudo").animate([ 
-  {opacity:1},
-  // Tempo de fadeOut
-  {opacity:0}], 500);
-   // Timeout para que a tela só mude quando a opacidade esteja em 0 
-   setTimeout( () => {
-
-    document.getElementById("objetoDeEstudo").animate([ 
-      {opacity:0},
-      // Tempo de fadeInut
-      {opacity:1}],  2000 );
 
   aplicaFonteBauhaus() {
     // Linha abaixo só permite clicar quando não já está clicado
@@ -464,8 +418,6 @@ if(document.getElementById("escola-tipografia-3").style.opacity!=1){
       }
     }
   }
-}
-}
 
   // -------------- POP ART --------------
   exibeDialogoPopArt() {
@@ -556,8 +508,6 @@ if(document.getElementById("escola-tipografia-3").style.opacity!=1){
   aplicaFontePopArt() {
     // Linha abaixo não permite que usuário ifclique em botão já clicado(document.getElementById("escola-tipografia-4").style.opacity!=1)
     // Linha abaixo só permite clicar quando não já está clicado
-    {
-
       document.getElementById("objetoDeEstudo").animate([
         { opacity: 1 },
         // Tempo de fadeOut
@@ -593,6 +543,5 @@ if(document.getElementById("escola-tipografia-3").style.opacity!=1){
           document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 1;");
         }
       }
-    }
   }
 }

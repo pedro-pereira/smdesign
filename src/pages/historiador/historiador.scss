@@ -226,14 +226,14 @@ page-historiador {
 
 
 
-  @keyframes esmaecer {
+  /*@keyframes esmaecer {
       0% { opacity: 1;   }
      20% { opacity: 0.9; }
      40% { opacity: 0.5; }
      60% { opacity: 0.3; }
      80% { opacity: 0;   }
     100% { opacity: 0;   }
-  }  
+  } */ 
 
 
   .flex-container {
@@ -246,6 +246,9 @@ page-historiador {
     text-align: center;
   }
 
+  #carregamento{
+    display: none;
+  }
 
 
 // ------------------------ NORMAL ------------------------

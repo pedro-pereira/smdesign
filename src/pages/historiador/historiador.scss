@@ -45,7 +45,9 @@ page-historiador {
   }
 
   .botaoVoltar {
-    content: url('/assets/imgs/botaoVoltar.png');
+    transform: scale(0.8);
+    content: url('/assets/imgs/botao-voltar.png');
+    position: relative;
   }
 
   .botaoAleatorio {
@@ -67,10 +69,6 @@ page-historiador {
     min-height: 80px;
     background-color: transparent; 
     border: none;
-    /*
-    padding: 12px;
-    padding-top: 25px;
-    */
   }
 
 
@@ -133,6 +131,7 @@ page-historiador {
     content: url('/assets/imgs/botaoPopArt.png');
   }
 
+
   // ----------------- HINT -----------------------
   .tooltip {
     position: relative;
@@ -173,9 +172,78 @@ page-historiador {
   }
 
   .objetoDeEstudo {
-    width: 100%;
-    height: 50em;
+	  position: relative;
+    left: 30px;
+    width: auto;
+    height: 93vh;
+    max-height: 93vh;
+    border-radius: 20px;
+    z-index: -1;
   }
+  
+  .loading{
+    opacity: 1;
+  }
+
+  .fadeOut{
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  
+  .fadeIn{
+    opacity: 1;
+    transition: opacity 2s;
+  }
+
+  /*
+  #gridDebotoes{
+
+  }
+  */
+  /**{
+    border:solid;
+  }*/
+
+  #gridMaior{
+    width: 1100px;
+  }
+
+/*Botoes de baixo*/
+  .botaoCelula{
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+  }
+
+  .botaoCelula{
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+  }
+
+  #celulaBotaoAleatorio{
+    position: absolute;
+    left: 7vw;
+    z-index: 1;
+  }
+  
+  #celulaBotaoReiniciar{  
+    z-index: 1;
+  }
+
+	#celulaBotaoGaleria{
+    position: absolute;
+    left: 13.5vw;
+    z-index: 1;
+
+  }				  
+  
+  /*tira caixa dos botões*/
+  /*button{
+    background-color: transparent;
+  }*/
 
 /*
   .esmaecer {
@@ -202,7 +270,20 @@ page-historiador {
     width: 100%;
     text-align: center;
   }
+  
+  #carregamento{
+    display: none;
+  }
 
+  .divBotoesInferiores {
+    display: inline-block; 
+    position: absolute; 
+    bottom: 0;
+  }
+  
+  .sombraEscolas{
+    box-shadow: 0px 7px 10px black;
+  }
 
 
 // ------------------------ NORMAL ------------------------

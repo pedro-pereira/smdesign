@@ -8,16 +8,16 @@
   </ion-navbar>
 </ion-header>
 -->
-<ion-content fullscreen padding>
+<ion-content padding>
 <!--
   <button (click)="voltarPaginaInicial()" id="botao-voltar">
     <ion-icon class="botaoVoltar"></ion-icon>
   </button>
 -->
-  <ion-grid>
+  <ion-grid id="gridMaior">
     <ion-row>
       <ion-col col-1>
-        <ion-grid id="gridDeBotoes">
+        <ion-grid id="gridDeBotoes" >
 
           <ion-row id="linha01">
             <ion-col id="celulaBotaoArtDeco">
@@ -156,8 +156,8 @@
           </ion-row>
 
           <ion-row id="linha05">
-            <ion-col>
-              <button id="celulaBotaoReiniciar" (click)="acaoBotaoX()">
+            <ion-col id="celulaBotaoReiniciar">
+              <button (click)="acaoBotaoX()">
                 <ion-icon class="botaoReiniciar"></ion-icon>
               </button>
             </ion-col>
@@ -172,11 +172,12 @@
       <ion-col col-11>
         <ion-grid id="gridDeEstudo">
           <ion-row id="linha01">
-            <ion-col>
 
-              <div id = "objetoDeEstudo" class = "objetoDeEstudo flex-container">
+            <ion-col id="fade">
+              <div id = "objetoDeEstudo" class = "objetoDeEstudo flex-container "> 
+                <div id="loading"></div>
               </div>
-
+            
             </ion-col>
           </ion-row>
           <!--

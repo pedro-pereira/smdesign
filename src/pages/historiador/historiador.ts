@@ -17,6 +17,7 @@ export class HistoriadorPage {
   botaoDeLayoutAtivo     = [1, 1, 1, 1];
 
   constructor(public navCtrl: NavController) {
+
   }
 
   voltarPaginaInicial() {
@@ -40,6 +41,11 @@ export class HistoriadorPage {
   }
 
   aplicaLayoutArtDeco() {
+    if(document.getElementById("escola-layout-1").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
     this.caracteristicas[0] = "D";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -65,6 +71,11 @@ export class HistoriadorPage {
   }
 
   aplicaCorArtDeco() {
+   if(document.getElementById("escola-cor-1").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
     this.caracteristicas[1] = "D";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -91,6 +102,12 @@ export class HistoriadorPage {
   }
 
   aplicaFonteArtDeco() {
+    if(document.getElementById("escola-tipografia-1").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
+
     this.caracteristicas[2] = "D";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -124,6 +141,11 @@ export class HistoriadorPage {
   }
 
   aplicaLayoutArtNoveau() {
+    if(document.getElementById("escola-layout-2").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
     this.caracteristicas[0] = "Nv";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -149,6 +171,13 @@ export class HistoriadorPage {
   }
 
   aplicaCorArtNoveau() {
+    if(document.getElementById("escola-cor-2").style.opacity!=1){
+      document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
+    
+
     this.caracteristicas[1] = "Nv";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -170,6 +199,13 @@ export class HistoriadorPage {
   }
 
   aplicaFonteArtNoveau() {
+    if(document.getElementById("escola-tipografia-2").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+
+    }
+
     this.caracteristicas[2] = "Nv";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -203,6 +239,12 @@ export class HistoriadorPage {
   }
 
   aplicaLayoutBauhaus() {
+   if(document.getElementById("escola-layout-3").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
+
     this.caracteristicas[0] = "B";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -229,6 +271,11 @@ export class HistoriadorPage {
   }
 
   aplicaCorBauhaus() {
+    if(document.getElementById("escola-cor-3").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
     this.caracteristicas[1] = "B";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -250,6 +297,12 @@ export class HistoriadorPage {
   }
 
   aplicaFonteBauhaus() {
+    if(document.getElementById("escola-tipografia-3").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
+
     this.caracteristicas[2] = "B";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -283,6 +336,12 @@ export class HistoriadorPage {
   }
 
   aplicaLayoutPopArt() {
+    if(document.getElementById("escola-layout-4").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
+
     this.caracteristicas[0] = "P";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -308,6 +367,11 @@ export class HistoriadorPage {
   }
 
   aplicaCorPopArt() {
+if(document.getElementById("escola-cor-4").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
     this.caracteristicas[1] = "P";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
@@ -329,6 +393,12 @@ export class HistoriadorPage {
   }
 
   aplicaFontePopArt() {
+    if(document.getElementById("escola-tipografia-4").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {transform: 'scale(0)',easing: "ease-in"},
+       {transform: 'scale(1)',easing: "ease-out"}],  500 );
+    }
+
     this.caracteristicas[2] = "P";
     var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";

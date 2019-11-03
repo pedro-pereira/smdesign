@@ -19,7 +19,9 @@ export class HistoriadorPage {
   botaoDeLayoutAtivo = [1, 1, 1, 1];
 
   constructor(public navCtrl: NavController) {
+
   }
+
 
   voltarPaginaInicial() {
     this.navCtrl.push(this.homePage);
@@ -129,6 +131,31 @@ export class HistoriadorPage {
       }
     }
   }
+}
+
+aplicaFonteArtDeco() {
+  // Linha abaixo só permite clicar quando não já está clicado
+  if(document.getElementById("escola-tipografia-1").style.opacity!=1){
+    document.getElementById("objetoDeEstudo").animate([ 
+      {opacity:1},
+      // Tempo de fadeOut
+      {opacity:0}], 500);
+    // Timeout para que a tela só mude quando a opacidade esteja em 0 
+    setTimeout( () => {
+
+      document.getElementById("objetoDeEstudo").animate([ 
+        {opacity:0},
+        // Tempo de fadeIn
+        {opacity:1}],  2000 );
+
+
+      this.caracteristicas[2] = "D";
+      var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+      var sufixo = "";
+
+      for (var i = 0; i < this.caracteristicas.length; i++) {
+        sufixo += this.caracteristicas[i];
+      }
 
   aplicaFonteArtDeco() {
     // Linha abaixo só permite clicar quando não já está clicado
@@ -169,6 +196,7 @@ export class HistoriadorPage {
       }
     }
   }
+}
 
   // -------------- ART NOVEAU --------------
   exibeDialogoArtNoveau() {
@@ -344,7 +372,6 @@ export class HistoriadorPage {
         }
       }
     }
-
   }
 
   aplicaCorBauhaus() {
@@ -381,6 +408,22 @@ export class HistoriadorPage {
       }
     }
   }
+}
+
+aplicaFonteBauhaus() {
+// Linha abaixo só permite clicar quando não já está clicado
+if(document.getElementById("escola-tipografia-3").style.opacity!=1){
+ document.getElementById("objetoDeEstudo").animate([ 
+  {opacity:1},
+  // Tempo de fadeOut
+  {opacity:0}], 500);
+   // Timeout para que a tela só mude quando a opacidade esteja em 0 
+   setTimeout( () => {
+
+    document.getElementById("objetoDeEstudo").animate([ 
+      {opacity:0},
+      // Tempo de fadeInut
+      {opacity:1}],  2000 );
 
   aplicaFonteBauhaus() {
     // Linha abaixo só permite clicar quando não já está clicado
@@ -421,6 +464,8 @@ export class HistoriadorPage {
       }
     }
   }
+}
+}
 
   // -------------- POP ART --------------
   exibeDialogoPopArt() {

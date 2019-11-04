@@ -30,6 +30,7 @@
     document.getElementsByTagName("head")[0].appendChild(mf);
   })();
 </script>
+
 <ion-grid id="gridMaior">
   <ion-row>
     <ion-col col-1>
@@ -174,12 +175,12 @@
 
       <ion-row id="linha05">
         <ion-col id="celulaBotaoReiniciar">
-          <button (click)="acaoBotaoX()" style="background-color: transparent;">
+          <button (click)="carregaLayoutNormal()" style="background-color: transparent;">
             <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
           </button>
         </ion-col>
         <ion-col id="celulaBotaoAleatorio">
-          <button (click)="aleatorio()" style="background-color: transparent;">
+          <button (click)="acaoBotaoY()" style="background-color: transparent;">
             <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
           </button>
         </ion-col>
@@ -194,19 +195,14 @@
   <ion-col col-11>
     <ion-grid id="gridDeEstudo">
       <ion-row id="linha01">
-
         <ion-col id="fade">
-          <div id="objetoDeEstudo" class="objetoDeEstudo flex-container ">
+          <div id="objetoDeEstudo" class="objetoDeEstudo flex-container" onload="carregaLayoutNormal()" >
             <div id="loading"></div>
           </div>
           <div id="divJose">
             <div id="balaoDeDialogo" ></div>
-            <div id="jose" class="explicando" (click)="desapareceBalao()">
-
-            </div>
+            <div id="jose" class="explicando" (click)="desapareceBalao()"></div>
           </div>
-
-
         </ion-col>
       </ion-row>
           <!--

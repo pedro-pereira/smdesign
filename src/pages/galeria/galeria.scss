@@ -19,5 +19,9 @@ page-galeria {
     margin: 0px;
     padding: 0px;
   }
-
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(2.0);
+  }
 }

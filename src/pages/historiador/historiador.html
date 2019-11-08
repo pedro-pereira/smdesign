@@ -1,227 +1,248 @@
-<!--
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>(LOGO) Saiba Mais Design</ion-title>
-  </ion-navbar>
-</ion-header>
--->
 <ion-content padding>
-  <!--
-  <button (click)="voltarPaginaInicial()" id="botao-voltar">
-    <ion-icon class="botaoVoltar"></ion-icon>
-  </button>
--->
   <!--
   <div id="carregamento"
     class="DNN DND DNB DNP DDN DDD DDB DDP DBN DBD DBB DBP DPN DPD DPB DPP BNN BND BNB BNP BDN BDD BDB BDP BBN BBD BBB BBP BPN BPD BPB BPP PNN PND PNB PNP PDN PDD PDB PDP PBN PBD PBB PBP PPN PPD PPB PPP">
-</div>
--->
+  </div>
+  -->
 
-<!-- teste de mouseFlow quando subir para site -->
-<script type="text/javascript">
-  window._mfq = window._mfq || [];
-  (function () {
-    var mf = document.createElement("script");
-    mf.type = "text/javascript"; mf.async = true;
-    mf.src = "//cdn.mouseflow.com/projects/a66f8894-535d-47b9-9065-806d3b2faac8.js";
-    document.getElementsByTagName("head")[0].appendChild(mf);
-  })();
-</script>
+  <!-- Teste de mouseFlow quando subir para site -->
+  <script type="text/javascript">
+    window._mfq = window._mfq || [];
+    (function () {
+      var mf = document.createElement("script");
+      mf.type = "text/javascript"; mf.async = true;
+      mf.src = "//cdn.mouseflow.com/projects/a66f8894-535d-47b9-9065-806d3b2faac8.js";
+      document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
+  </script>
 
-<ion-grid id="gridMaior">
-  <ion-row>
-    <ion-col col-1>
-      <ion-grid id="gridDeBotoes" >
+  <div class="botao-voltar-div">
+    <button (click)="voltarPaginaInicial()" style="background: transparent;">
+      <ion-icon class="botaoVoltar"></ion-icon>
+    </button>
+  </div>
 
-        <ion-row id="linha01">
-          <ion-col id="celulaBotaoArtDeco">
-            <div class="divComFab">
-              <ion-fab vertical="center" horizontal="center">
+  <ion-grid id="gridMaior">
+    <ion-row>
+      <ion-col col-1>
+        <ion-grid id="gridDeBotoes">
+          <ion-row id="linha01">
+            <ion-col id="celulaBotaoArtDeco">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
 
-                <button ion-fab mini fab-close-active artDeco (click)="exibeDialogoArtDeco()" class="sombraEscolas">
-                  <ion-icon class="botaoArtDeco"></ion-icon>
-                </button>
-
-                <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
-                  <div class="tooltip">
-                    <button ion-fab (click)="aplicaCorArtDeco()" id="escola-cor-1" class="sombraEscolas">
-                      <ion-icon class="botaoPaletaCores"></ion-icon>
-                    </button>
-                    <span class="tooltiptext">Tooltip text</span>
-                  </div>
-                </ion-fab-list>
-
-                <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
-                  <button ion-fab (click)="aplicaFonteArtDeco()" id="escola-tipografia-1" class="sombraEscolas">
-                    <ion-icon class="botaoTipografia"></ion-icon>
+                  <button ion-fab mini fab-close-active artDeco (click)="exibeDialogoArtDeco()" class="sombraEscolas">
+                    <ion-icon class="botaoArtDeco"></ion-icon>
                   </button>
-                </ion-fab-list>
 
-                <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
-                  <button ion-fab (click)="aplicaLayoutArtDeco()" id="escola-layout-1" class="sombraEscolas">
-                    <ion-icon class="botaoLayout"></ion-icon>
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorArtDeco()" id="escola-cor-1">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFonteArtDeco()" id="escola-tipografia-1" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutArtDeco()" id="escola-layout-1" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
+                  </ion-fab-list>
+                </ion-fab>
+              </div>
+              <br>
+              <br>
+              <br>
+            </ion-col>
+          </ion-row>
+
+          <ion-row id="linha02">
+            <ion-col id="celulaBotaoArtNoveau">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
+
+                  <button ion-fab mini fab-close-active artNoveau (click)="exibeDialogoArtNoveau()"
+                    class="sombraEscolas">
+                    <ion-icon class="botaoArtNoveau"></ion-icon>
                   </button>
-                </ion-fab-list>
-              </ion-fab>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorArtNoveau()" id="escola-cor-2" class="sombraEscolas">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFonteArtNoveau()" id="escola-tipografia-2" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutArtNoveau()" id="escola-layout-2" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
+                  </ion-fab-list>
+
+                </ion-fab>
+              </div>
+              <br>
+              <br>
+              <br>
+            </ion-col>
+          </ion-row>
+
+          <ion-row id="linha03">
+            <ion-col id="celulaBotaoBauhaus">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
+
+                  <button ion-fab mini fab-close-active bauhaus (click)="exibeDialogoBauhaus()" class="sombraEscolas">
+                    <ion-icon class="botaoBauhaus"></ion-icon>
+                  </button>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorBauhaus()" id="escola-cor-3" class="sombraEscolas">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFonteBauhaus()" id="escola-tipografia-3" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutBauhaus()" id="escola-layout-3" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
+                  </ion-fab-list>
+                </ion-fab>
+              </div>
+              <br>
+              <br>
+              <br>
+            </ion-col>
+          </ion-row>
+
+          <ion-row id="linha04">
+            <ion-col id="celulaBotaoPopArt">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
+
+                  <button ion-fab mini fab-close-active popArt (click)="exibeDialogoPopArt()" class="sombraEscolas">
+                    <ion-icon class="botaoPopArt"></ion-icon>
+                  </button>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorPopArt()" id="escola-cor-4" class="sombraEscolas">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFontePopArt()" id="escola-tipografia-4" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutPopArt()" id="escola-layout-4" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
+                  </ion-fab-list>
+                </ion-fab>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row id="linha05">
+            <div style="margin-top: 45px; border: none;">
+              <ion-col id="celulaBotaoReiniciar">
+                <div class="tooltip">
+                  <button (click)="carregaLayoutNormal()" style="background-color: transparent;">
+                    <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
+                  </button>
+                  <span class="tooltiptext">Reiniciar</span>
+                </div>
+              </ion-col>
+              <ion-col id="celulaBotaoAleatorio">
+                <div class="tooltip">
+                  <button (click)="acaoBotaoY()" style="background-color: transparent;">
+                    <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
+                  </button>
+                  <span class="tooltiptext">Modo Aleatório</span>
+                </div>
+              </ion-col>
+              <ion-col id="celulaBotaoGaleria">
+                <div class="tooltip">
+                  <button (click)="abrirGaleria()" style="background-color: transparent;">
+                    <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
+                  </button>
+                  <span class="tooltiptext">Galeria</span>
+                </div>
+              </ion-col>
             </div>
-            <br>
-            <br>
-          </ion-col>
-        </ion-row>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col col-11>
+        <ion-grid id="gridDeEstudo">
+          <ion-row id="linha01">
+            <ion-col id="fade">
+              <div id="objetoDeEstudo" class="objetoDeEstudo flex-container" onload="carregaLayoutNormal()">
+                <div id="loading"></div>
+              </div>
+              <div id="divJose">
+                <div id="balaoDeDialogo" class="balaoDeDialogo shadow"></div>
+                <div id="jose" class="jose explicando" (click)="desapareceBalao()"></div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-        <ion-row id="linha02">
-          <ion-col id="celulaBotaoArtNoveau">
-            <div class="divComFab">
-              <ion-fab vertical="center" horizontal="center">
-
-                <button ion-fab mini fab-close-active artNoveau (click)="exibeDialogoArtNoveau()"
-                class="sombraEscolas">
-                <ion-icon class="botaoArtNoveau"></ion-icon>
-              </button>
-
-              <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
-                <button ion-fab (click)="aplicaCorArtNoveau()" id="escola-cor-2" class="sombraEscolas">
-                  <ion-icon class="botaoPaletaCores"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-              <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
-                <button ion-fab (click)="aplicaFonteArtNoveau()" id="escola-tipografia-2" class="sombraEscolas">
-                  <ion-icon class="botaoTipografia"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-              <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
-                <button ion-fab (click)="aplicaLayoutArtNoveau()" id="escola-layout-2" class="sombraEscolas">
-                  <ion-icon class="botaoLayout"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-            </ion-fab>
-          </div>
-          <br>
-          <br>
-        </ion-col>
-      </ion-row>
-
-      <ion-row id="linha03">
-        <ion-col id="celulaBotaoBauhaus">
-          <div class="divComFab">
-            <ion-fab vertical="center" horizontal="center">
-
-              <button ion-fab mini fab-close-active bauhaus (click)="exibeDialogoBauhaus()" class="sombraEscolas">
-                <ion-icon class="botaoBauhaus"></ion-icon>
-              </button>
-
-              <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
-                <button ion-fab (click)="aplicaCorBauhaus()" id="escola-cor-3" class="sombraEscolas">
-                  <ion-icon class="botaoPaletaCores"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-              <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
-                <button ion-fab (click)="aplicaFonteBauhaus()" id="escola-tipografia-3" class="sombraEscolas">
-                  <ion-icon class="botaoTipografia"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-              <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
-                <button ion-fab (click)="aplicaLayoutBauhaus()" id="escola-layout-3" class="sombraEscolas">
-                  <ion-icon class="botaoLayout"></ion-icon>
-                </button>
-              </ion-fab-list>
-            </ion-fab>
-          </div>
-          <br>
-          <br>
-        </ion-col>
-      </ion-row>
-
-      <ion-row id="linha04">
-        <ion-col id="celulaBotaoPopArt">
-          <div class="divComFab">
-            <ion-fab vertical="center" horizontal="center">
-
-              <button ion-fab mini fab-close-active popArt (click)="exibeDialogoPopArt()" class="sombraEscolas">
-                <ion-icon class="botaoPopArt"></ion-icon>
-              </button>
-
-              <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
-                <button ion-fab (click)="aplicaCorPopArt()" id="escola-cor-4" class="sombraEscolas">
-                  <ion-icon class="botaoPaletaCores"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-              <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
-                <button ion-fab (click)="aplicaFontePopArt()" id="escola-tipografia-4" class="sombraEscolas">
-                  <ion-icon class="botaoTipografia"></ion-icon>
-                </button>
-              </ion-fab-list>
-
-              <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
-                <button ion-fab (click)="aplicaLayoutPopArt()" id="escola-layout-4" class="sombraEscolas">
-                  <ion-icon class="botaoLayout"></ion-icon>
-                </button>
-              </ion-fab-list>
-            </ion-fab>
-          </div>
-          <br>
-          <br>
-        </ion-col>
-      </ion-row>
-
-      <ion-row id="linha05">
-        <ion-col id="celulaBotaoReiniciar">
-          <button (click)="carregaLayoutNormal()" style="background-color: transparent;">
-            <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col id="celulaBotaoAleatorio">
-          <button (click)="acaoBotaoY()" style="background-color: transparent;">
-            <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col id="celulaBotaoGaleria">
-          <button (click)="abrirGaleria()" style="background-color: transparent;">
-            <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-col>
-  <ion-col col-11>
-    <ion-grid id="gridDeEstudo">
-      <ion-row id="linha01">
-        <ion-col id="fade">
-          <div id="objetoDeEstudo" class="objetoDeEstudo flex-container" onload="carregaLayoutNormal()" >
-            <div id="loading"></div>
-          </div>
-          <div id="divJose">
-            <div id="balaoDeDialogo" ></div>
-            <div id="jose" class="explicando" (click)="desapareceBalao()"></div>
-          </div>
-        </ion-col>
-      </ion-row>
-          <!--
-              <ion-row id="linha02">
-                <ion-col col-10 id="balaoDeDialogo">
-                  <div>
-                    <ion-img id="balaoDeDialogo"></ion-img>
-                  </div>
-                </ion-col>
-                <ion-col col-2 id="personagem">
-                  <div>
-                    Mini Mamede
-                  </div>
-                </ion-col>
-              </ion-row>
-            -->
-          </ion-grid>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-  </ion-content>
+</ion-content>

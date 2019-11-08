@@ -16,5 +16,20 @@ page-home {
     .botaoCreditos {
         content: url('/assets/imgs/home/botao-creditos.png');
         background-color: transparent; 
-    }    
+    }
+
+    .div-botoes {
+        display: inline-flex;
+        position: absolute;
+        margin-left: 60%;
+        margin-top: 30%;
+        transform: scale(1.5);
+    }
+
+    .sombra-botoes{
+        background-color: transparent;
+        color: transparent;
+        box-shadow:  0px 7px 10px black;
+        border-radius: 100%;
+    }
 }

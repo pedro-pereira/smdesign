@@ -20,8 +20,9 @@ page-historiador {
     border: solid 1px #ddd;
     padding: 0px;
   }
-     
+  
   .scroll-content {
+  
     padding-top: 0px;
     padding-bottom: 16px;
   }
@@ -30,6 +31,10 @@ page-historiador {
     width: 100px;
     height: 100px;
     line-height: 40px;
+  }
+
+  .fab-md-in-list {
+    background-color: #E87963;
   }
 
   .botaoPaletaCores {
@@ -60,6 +65,11 @@ page-historiador {
 
   .botaoGaleria {
     content: url('/assets/imgs/botao-galeria.png');
+  }
+
+  .botao-voltar-div {
+    position: absolute;
+    z-index: 1;
   }
 
   .divComFab {
@@ -133,10 +143,12 @@ page-historiador {
   }
 
 
-  // ----------------- HINT -----------------------
+  // ----------------------- HINT ----------------------- INI ---
   .tooltip {
     position: relative;
     display: inline-block;
+    background-color: transparent;
+    border: none;
   }
 
   .tooltip .tooltiptext {
@@ -154,6 +166,8 @@ page-historiador {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
+    font-family: 'High Tower Text';
+    font-size: 16px;
   }
   
   .tooltip .tooltiptext::after {
@@ -171,6 +185,8 @@ page-historiador {
     visibility: visible;
     opacity: 1;
   }
+
+  // ----------------------- HINT ----------------------- FIM ---
 
   .objetoDeEstudo {
 	  position: relative;
@@ -222,86 +238,7 @@ page-historiador {
     position: absolute;
     left: 13.5vw;
     z-index: 1;
-  }				  
-
-  #divJose {
-    position: absolute;
-    width: 80%;
-    bottom: 1%;
-    left: 22%;
-    height: 20%;
-    border-bottom-left-radius: 10%;
-    background-color: transparent;
-    border-color: transparent;
   }
-
-  #balaoDeDialogo{
-    width: 75%;
-    height: 100%;
-    border-top-left-radius: 100%;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 120%;
-    border-top-right-radius: 80%;
-    overflow: hidden;
-    text-align-last: center;
-    padding-top: 2.8%;
-    padding-left: 6%;
-    padding-right: 4%;
-    white-space: pre-wrap;
-    background-color: #F3F0E9;
-  }
-
-  #jose.explicando{
-    display: block;
-    position: relative;
-    bottom: 265%;
-    right: -55%;
-    transform: scale(0.3);
-    content: url("/assets/imgs/personagem/jose-explicando.png");
-    cursor: pointer;
-  }
-
-  #jose.feliz{
-    display: block;
-    position: relative;
-    bottom: 265%;
-    right: -55%;
-    transform: scale(0.3);
-    content: url("/assets/imgs/personagem/jose-feliz.png");
-    cursor: pointer;
-  }
-
-  #jose.confuso{
-    display: block;
-    position: relative;
-    bottom: 265%;
-    right: -55%;
-    transform: scale(0.3);
-    content: url("/assets/imgs/personagem/jose-confuso.png");
-    cursor: pointer;
-  }
-
-  #jose.surpreso{
-    display: block;
-    position: relative;
-    bottom: 265%;
-    right: -55%;
-    transform: scale(0.3);
-    content: url("/assets/imgs/personagem/jose-feliz.png");
-    cursor: pointer;
-  }
-
-  /*tira caixa dos botões*/
-  /*
-  button{
-    background-color: transparent;
-    }
-  
-  .esmaecer {
-    animation-name: esmaecer;
-    animation-duration: 4s;
-  }
-  */
 
   #celulaBotaoAleatorio{
     position: absolute;
@@ -318,17 +255,6 @@ page-historiador {
     left: 13.5vw;
     z-index: 1;
   }
-
-  /*
-  @keyframes esmaecer {
-      0% { opacity: 1;   }
-     20% { opacity: 0.9; }
-     40% { opacity: 0.5; }
-     60% { opacity: 0.3; }
-     80% { opacity: 0;   }
-    100% { opacity: 0;   }
-  } 
-  */
 
   .flex-container {
     display: flex;
@@ -353,6 +279,113 @@ page-historiador {
   .sombraEscolas{
     box-shadow: 0px 7px 10px black;
   }
+
+  // ----------------------- PERSONAGEM JOSE ----------------------- INI ---
+
+  #divJose {
+    position: absolute;
+    width: 80%;
+    bottom: 1%;
+    left: 22%;
+    height: 20%;
+    border-bottom-left-radius: 10%;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .jose {
+    display: block;
+    position: relative;
+    transform: scale(0.3);
+    content: url("/assets/imgs/personagem/jose-explicando.png");
+    cursor: pointer;
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+
+    /*
+    bottom: 300%;
+    right: -68%;
+    */
+    
+    bottom: 260%;
+    right: -70%;  
+  }
+
+  .explicando{
+    content: url("/assets/imgs/personagem/jose-explicando.png");
+  }
+
+  .feliz{  
+    content: url("/assets/imgs/personagem/jose-feliz.png");
+  }
+
+  .confuso{
+    content: url("/assets/imgs/personagem/jose-confuso.png");
+  }
+
+  .surpreso{  
+    content: url("/assets/imgs/personagem/jose-feliz.png");
+  }
+
+  @font-face {
+    font-family: 'High Tower Text';
+    src: url('/assets/fonts/high-tower-text.ttf');
+  }
+
+  .balaoDeDialogo {
+    /*
+    width: 75%;
+    height: 100%;
+    margin: 50px auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #3D5971;
+    color: #fff;
+    font-family: 'High Tower Text';
+    font-size: 14pt;
+    position: relative;
+    */
+
+    width: 90%;
+    height: 100%;
+    margin-top: 10px;
+    background: #3D5971;
+    color: #fff;
+    font-family: 'High Tower Text';
+    font-size: 14pt;
+    position: relative;
+    padding: 1%;
+    padding-left: 2%;
+    text-align: justify;
+    border-radius: 10px;
+
+    padding: 1%;
+    padding-left: 2%;
+    text-align: justify;
+  }
+   
+  .balaoDeDialogo:before {
+    // content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid #3D5971;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #3D5971;
+    border-bottom: 15px solid transparent;
+    right: -16px;
+    top: 0px;
+  }
+
+  .shadow {
+    -moz-box-shadow:    3px 3px 5px 6px black;
+    -webkit-box-shadow: 3px 3px 5px 6px black;
+    box-shadow:         3px 3px 5px 6px black;
+  }
+
+  // ----------------------- PERSONAGEM JOSE ----------------------- FIM ---
 
 
 // ------------------------ NORMAL ------------------------

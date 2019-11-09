@@ -29,6 +29,7 @@ export class HistoriadorPage {
     this.navCtrl.push(this.homePage);
   }
 
+
   acaoBotaoY() {
     alert('Botão Y');
   }
@@ -607,10 +608,27 @@ export class HistoriadorPage {
     }
   }
 
-  aleatorio() {
+  geraModoAleatorio() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
       "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
+
+    var escolas = ["D", "Nv", "B", "P", "N"];
+
+    var escolaEscolhida;
+    for (var i = 0; i < 3; i++) {
+      escolaEscolhida = Math.floor(Math.random() * 5);
+      this.caracteristicas[i] = escolas[escolaEscolhida];
+    }
+
+    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
+    var sufixo = "";
+
+    for (var i = 0; i < this.caracteristicas.length; i++) {
+      sufixo += this.caracteristicas[i];
+    }
+
+    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
   }
 
 }

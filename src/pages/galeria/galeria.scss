@@ -10,9 +10,11 @@ page-galeria {
   }
 
   .botaoVoltar {
-    scale: 0.5;
+    transform: scale(0.8);
     content: url('/assets/imgs/botao-voltar.png');
     position: absolute;
+    box-shadow: 0px 7px 10px black;
+    border-radius: 100%;
   }
 
   .swiper-slide {

@@ -53,6 +53,8 @@ page-historiador {
     transform: scale(0.8);
     content: url('/assets/imgs/botao-voltar.png');
     position: relative;
+    box-shadow: 0px 7px 10px black;
+    border-radius: 100%;
   }
 
   .botaoAleatorio {

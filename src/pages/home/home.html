@@ -1,21 +1,17 @@
-<ion-header>
-  <!--
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>(LOGO) Saiba Mais Design</ion-title>
-  </ion-navbar>
--->
-</ion-header>
+<ion-content>
 
-<ion-content padding>
-  <h3>Tela Inicial</h3>
+  <div class = "div-botoes">
+    <div class="colunaBotaoCredito">
+      <button (click)="abrirPaginaCreditos()" style="background-color:transparent;">
+        <ion-icon class="botaoCreditos sombra-botoes"></ion-icon>
+      </button>
+    </div>
 
-  <p>
-    Breve introdução e contextualização do "Saiba Mais Design".
-  </p>
-
-  <button ion-button (click)="openPage()">Ir para o site</button>
+    <div class="colunaBotaoIniciar">
+      <button (click)="abrirAplicacao()" style="background-color:transparent; text-align: right;">
+        <ion-icon class="botaoIniciar sombra-botoes"></ion-icon>
+      </button>
+    </div>
+  </div>
 
 </ion-content>

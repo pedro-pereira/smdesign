@@ -12,34 +12,542 @@ page-historiador {
   ion-col > div {
     background-color: #f7f7f7;
     border: solid 1px #ddd;
-    padding: 8px;
+    padding: 0px;
   }
 
   ion-row > div {
     background-color: #f7f7f7;
     border: solid 1px #ddd;
-    padding: 8px;
+    padding: 0px;
   }
-     
+  
   .scroll-content {
-    padding-top: 60px;
+  
+    padding-top: 0px;
+    padding-bottom: 16px;
   }
 
-  .botaoTransparente {
-    opacity: 0.3;
+  .fab[mini] {
+    width: 100px;
+    height: 100px;
+    line-height: 40px;
   }
 
-  .botaoNormal {
-    opacity: 1.0;
+  .fab-md-in-list {
+    background-color: #E87963;
+  }
+
+  .botaoPaletaCores {
+    content: url('/assets/imgs/botao-cor.png');
+  }
+
+  .botaoTipografia {
+    content: url('/assets/imgs/botao-tipografia.png');
+  }
+
+  .botaoLayout {
+    content: url('/assets/imgs/botao-layout.png');
+  }
+
+  .botaoVoltar {
+    transform: scale(0.8);
+    content: url('/assets/imgs/botao-voltar.png');
+    position: relative;
+    box-shadow: 0px 7px 10px black;
+    border-radius: 100%;
+  }
+
+  .botaoAleatorio {
+    content: url('/assets/imgs/botao-aleatorio.png');
+  }
+
+  .botaoReiniciar {
+    content: url('/assets/imgs/botao-reiniciar.png');
+  }
+
+  .botaoGaleria {
+    content: url('/assets/imgs/botao-galeria.png');
+  }
+
+  .botao-voltar-div {
+    position: absolute;
+    z-index: 1;
   }
 
   .divComFab {
     width: auto;
-    // margin: 10px 0 0 0;
     margin: auto;
     background: rgba(237, 237, 222, 0.0);
     min-height: 80px;
-    padding: 12px;
+    background-color: transparent; 
+    border: none;
   }
+
+
+  // -------------- ART DECO ----------------
+
+  .balaoDeDialogoArtDeco {
+    content: url('/assets/imgs/balaoDeDialogoArtDeco.png');
+  }
+
+  .botaoArtDeco {
+    content: url('/assets/imgs/botaoArtDeco.png');
+  }
+
+  .fab-close-active[artDeco] .fab-close-icon {
+    content: url('/assets/imgs/botaoArtDeco.png');
+  }
+
+
+  // -------------- ART NOVEAU --------------
+
+  .balaoDeDialogoArtNoveau {
+    content: url('/assets/imgs/balaoDeDialogoArtNoveau.png');
+  }
+
+  .botaoArtNoveau {
+    content: url('/assets/imgs/botaoArtNoveau.png');
+
+  }
+
+  .fab-close-active[artNoveau] .fab-close-icon {
+    content: url('/assets/imgs/botaoArtNoveau.png');
+  }
+
+
+  // -------------- BAUHAUS -----------------
+
+  .balaoDeDialogoBauhaus {
+    content: url('/assets/imgs/balaoDeDialogoBauhaus.png');
+  }
+
+  .botaoBauhaus {
+    content: url('/assets/imgs/botaoBauhaus.png');
+  }
+
+  .fab-close-active[bauhaus] .fab-close-icon {
+    content: url('/assets/imgs/botaoBauhaus.png');
+  }
+
+
+  // -------------- POP ART -----------------
+
+  .balaoDeDialogoPopArt {
+    content: url('/assets/imgs/balaoDeDialogoPopArt.png');
+  }
+
+  .botaoPopArt {
+    content: url('/assets/imgs/botaoPopArt.png');
+  }
+
+  .fab-close-active[popArt] .fab-close-icon {
+    content: url('/assets/imgs/botaoPopArt.png');
+  }
+
+
+  // ----------------------- HINT ----------------------- INI ---
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: 'High Tower Text';
+    font-size: 16px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // ----------------------- HINT ----------------------- FIM ---
+
+  .objetoDeEstudo {
+	  position: relative;
+    left: 30px;
+    width: auto;
+    height: 93vh;
+    max-height: 93vh;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  
+  .loading{
+    opacity: 1;
+  }
+
+  .fadeOut{
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  
+  .fadeIn{
+    opacity: 1;
+    transition: opacity 2s;
+  }
+
+  #gridMaior{
+    width: 1100px;
+  }
+
+  /*Botoes de baixo*/
+  .botaoCelula {
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+  }
+
+  #celulaBotaoAleatorio {
+    position: absolute;
+    left: 7vw;
+    z-index: 1;
+  }
+  
+  #celulaBotaoReiniciar {  
+    z-index: 1;
+  }
+
+	#celulaBotaoGaleria {
+    position: absolute;
+    left: 13.5vw;
+    z-index: 1;
+  }
+
+  #celulaBotaoAleatorio{
+    position: absolute;
+    left: 7vw;
+    z-index: 1;
+  }
+
+  #celulaBotaoReiniciar{  
+    z-index: 1;
+  }
+
+  #celulaBotaoGaleria{
+    position: absolute;
+    left: 13.5vw;
+    z-index: 1;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .flex-container > div {
+    width: 100%;
+    text-align: center;
+  }
+
+  #carregamento{
+    display: none;
+  }
+
+  .divBotoesInferiores {
+    display: inline-block; 
+    position: absolute; 
+    bottom: 0;
+  }
+
+  .sombraEscolas{
+    box-shadow: 0px 7px 10px black;
+  }
+
+  // ----------------------- PERSONAGEM JOSE ----------------------- INI ---
+
+  #divJose {
+    position: absolute;
+    width: 80%;
+    bottom: 1%;
+    left: 22%;
+    height: 20%;
+    border-bottom-left-radius: 10%;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .jose {
+    display: block;
+    position: relative;
+    transform: scale(0.3);
+    content: url("/assets/imgs/personagem/jose-explicando.png");
+    cursor: pointer;
+    background-color: transparent;
+    color: transparent;
+    box-shadow:  0px 7px 10px black;
+    border-radius: 100%;
+
+    /*
+    bottom: 300%;
+    right: -68%;
+    */
+    
+    bottom: 260%;
+    right: -70%;  
+  }
+
+  .explicando{
+    content: url("/assets/imgs/personagem/jose-explicando.png");
+  }
+
+  .feliz{  
+    content: url("/assets/imgs/personagem/jose-feliz.png");
+  }
+
+  .confuso{
+    content: url("/assets/imgs/personagem/jose-confuso.png");
+  }
+
+  .surpreso{  
+    content: url("/assets/imgs/personagem/jose-feliz.png");
+  }
+
+  @font-face {
+    font-family: 'High Tower Text';
+    src: url('/assets/fonts/high-tower-text.ttf');
+  }
+
+  .balaoDeDialogo {
+    /*
+    width: 75%;
+    height: 100%;
+    margin: 50px auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #3D5971;
+    color: #fff;
+    font-family: 'High Tower Text';
+    font-size: 14pt;
+    position: relative;
+    */
+
+    width: 90%;
+    height: 100%;
+    margin-top: 10px;
+    background: #3D5971;
+    color: #fff;
+    font-family: 'High Tower Text';
+    font-size: 14pt;
+    position: relative;
+    padding: 1%;
+    padding-left: 2%;
+    text-align: justify;
+    border-radius: 10px;
+
+    padding: 1%;
+    padding-left: 2%;
+    text-align: justify;
+  }
+   
+  .balaoDeDialogo:before {
+    // content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid #3D5971;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #3D5971;
+    border-bottom: 15px solid transparent;
+    right: -16px;
+    top: 0px;
+  }
+
+  .shadow {
+    -moz-box-shadow:    3px 3px 5px 6px black;
+    -webkit-box-shadow: 3px 3px 5px 6px black;
+    box-shadow:         3px 3px 5px 6px black;
+  }
+
+  // ----------------------- PERSONAGEM JOSE ----------------------- FIM ---
+
+
+// ------------------------ NORMAL ------------------------
+
+.NNN  { content: url('/assets/imgs/combinacoes/neutro/NNN.png'); }
+.NND  { content: url('/assets/imgs/combinacoes/neutro/NND.png'); }
+.NNNv { content: url('/assets/imgs/combinacoes/neutro/NNNv.png');}
+.NNB  { content: url('/assets/imgs/combinacoes/neutro/NNB.png'); }
+.NNP  { content: url('/assets/imgs/combinacoes/neutro/NNP.png'); }
+
+.NDN  { content: url('/assets/imgs/combinacoes/neutro/NDN.png'); }
+.NDD  { content: url('/assets/imgs/combinacoes/neutro/NDD.png'); }
+.NDNv { content: url('/assets/imgs/combinacoes/neutro/NDNv.png');}
+.NDB  { content: url('/assets/imgs/combinacoes/neutro/NDB.png'); }
+.NDP  { content: url('/assets/imgs/combinacoes/neutro/NDP.png'); }
+
+.NNvN { content: url('/assets/imgs/combinacoes/neutro/NNvN.png'); }
+.NNvD { content: url('/assets/imgs/combinacoes/neutro/NNvD.png'); }
+.NNvNv{ content: url('/assets/imgs/combinacoes/neutro/NNvNv.png');}
+.NNvB { content: url('/assets/imgs/combinacoes/neutro/NNvB.png'); }
+.NNvP { content: url('/assets/imgs/combinacoes/neutro/NNvP.png'); }
+
+.NBN  { content: url('/assets/imgs/combinacoes/neutro/NBN.png'); }
+.NBD  { content: url('/assets/imgs/combinacoes/neutro/NBD.png'); }
+.NBNv { content: url('/assets/imgs/combinacoes/neutro/NBNv.png');}
+.NBB  { content: url('/assets/imgs/combinacoes/neutro/NBB.png'); }
+.NBP  { content: url('/assets/imgs/combinacoes/neutro/NBP.png'); }
+
+.NPN  { content: url('/assets/imgs/combinacoes/neutro/NPN.png'); }
+.NPD  { content: url('/assets/imgs/combinacoes/neutro/NPD.png'); }
+.NPNv { content: url('/assets/imgs/combinacoes/neutro/NPNv.png');}
+.NPB  { content: url('/assets/imgs/combinacoes/neutro/NPB.png'); }
+.NPP  { content: url('/assets/imgs/combinacoes/neutro/NPP.png'); }
+
+// ------------------------ DECO ------------------------
+
+.DNN  { content: url('/assets/imgs/combinacoes/deco/DNN.png'); }
+.DND  { content: url('/assets/imgs/combinacoes/deco/DND.png'); }
+.DNNv { content: url('/assets/imgs/combinacoes/deco/DNNv.png');}
+.DNB  { content: url('/assets/imgs/combinacoes/deco/DNB.png'); }
+.DNP  { content: url('/assets/imgs/combinacoes/deco/DNP.png'); }
+
+.DDN  { content: url('/assets/imgs/combinacoes/deco/DDN.png'); }
+.DDD  { content: url('/assets/imgs/combinacoes/deco/DDD.png'); }
+.DDNv { content: url('/assets/imgs/combinacoes/deco/DDNv.png');}
+.DDB  { content: url('/assets/imgs/combinacoes/deco/DDB.png'); }
+.DDP  { content: url('/assets/imgs/combinacoes/deco/DDP.png'); }
+
+.DNvN { content: url('/assets/imgs/combinacoes/deco/DNvN.png'); }
+.DNvD { content: url('/assets/imgs/combinacoes/deco/DNvD.png'); }
+.DNvNv{ content: url('/assets/imgs/combinacoes/deco/DNvNv.png');}
+.DNvB { content: url('/assets/imgs/combinacoes/deco/DNvB.png'); }
+.DNvP { content: url('/assets/imgs/combinacoes/deco/DNvP.png'); }
+
+.DBN  { content: url('/assets/imgs/combinacoes/deco/DBN.png'); }
+.DBD  { content: url('/assets/imgs/combinacoes/deco/DBD.png'); }
+.DBNv { content: url('/assets/imgs/combinacoes/deco/DBNv.png');}
+.DBB  { content: url('/assets/imgs/combinacoes/deco/DBB.png'); }
+.DBP  { content: url('/assets/imgs/combinacoes/deco/DBP.png'); }
+
+.DPN  { content: url('/assets/imgs/combinacoes/deco/DPN.png'); }
+.DPD  { content: url('/assets/imgs/combinacoes/deco/DPD.png'); }
+.DPNv { content: url('/assets/imgs/combinacoes/deco/DPNv.png');}
+.DPB  { content: url('/assets/imgs/combinacoes/deco/DPB.png'); }
+.DPP  { content: url('/assets/imgs/combinacoes/deco/DPP.png'); }
+
+// ------------------------ NOVEAU ------------------------
+
+ .NvNN { content: url('/assets/imgs/combinacoes/noveau/NvNN.png'); }
+ .NvND { content: url('/assets/imgs/combinacoes/noveau/NvND.png'); }
+ .NvNNv{ content: url('/assets/imgs/combinacoes/noveau/NvNNv.png');}
+ .NvNB { content: url('/assets/imgs/combinacoes/noveau/NvNB.png'); }
+ .NvNP { content: url('/assets/imgs/combinacoes/noveau/NvNP.png'); }
+
+ .NvDN { content: url('/assets/imgs/combinacoes/noveau/NvDN.png'); }
+ .NvDD { content: url('/assets/imgs/combinacoes/noveau/NvDD.png'); }
+ .NvDNv{ content: url('/assets/imgs/combinacoes/noveau/NvDNv.png');}
+ .NvDB { content: url('/assets/imgs/combinacoes/noveau/NvDB.png'); }
+ .NvDP { content: url('/assets/imgs/combinacoes/noveau/NvDP.png'); }
+
+ .NvNvN { content: url('/assets/imgs/combinacoes/noveau/NvNvN.png'); }
+ .NvNvD { content: url('/assets/imgs/combinacoes/noveau/NvNvD.png'); }
+ .NvNvNv{ content: url('/assets/imgs/combinacoes/noveau/NvNvNv.png');}
+ .NvNvB { content: url('/assets/imgs/combinacoes/noveau/NvNvB.png'); }
+ .NvNvP { content: url('/assets/imgs/combinacoes/noveau/NvNvP.png'); }
+
+ .NvBN  { content: url('/assets/imgs/combinacoes/noveau/NvBN.png'); }
+ .NvBD  { content: url('/assets/imgs/combinacoes/noveau/NvBD.png'); }
+ .NvBNv { content: url('/assets/imgs/combinacoes/noveau/NvBNv.png');}
+ .NvBB  { content: url('/assets/imgs/combinacoes/noveau/NvBB.png'); }
+ .NvBP  { content: url('/assets/imgs/combinacoes/noveau/NvBP.png'); }
+
+ .NvPN  { content: url('/assets/imgs/combinacoes/noveau/NvPN.png'); }
+ .NvPD  { content: url('/assets/imgs/combinacoes/noveau/NvPD.png'); }
+ .NvPNv { content: url('/assets/imgs/combinacoes/noveau/NvPNv.png');}
+ .NvPB  { content: url('/assets/imgs/combinacoes/noveau/NvPB.png'); }
+ .NvPP  { content: url('/assets/imgs/combinacoes/noveau/NvPP.png'); }
+
+// ------------------------ BAUHAUS ------------------------
+
+ .BNN  { content: url('/assets/imgs/combinacoes/bauhaus/BNN.png'); }
+ .BND  { content: url('/assets/imgs/combinacoes/bauhaus/BND.png'); }
+ .BNNv { content: url('/assets/imgs/combinacoes/bauhaus/BNNv.png');}
+ .BNB  { content: url('/assets/imgs/combinacoes/bauhaus/BNB.png'); }
+ .BNP  { content: url('/assets/imgs/combinacoes/bauhaus/BNP.png'); }
+
+ .BDN  { content: url('/assets/imgs/combinacoes/bauhaus/BDN.png'); }
+ .BDD  { content: url('/assets/imgs/combinacoes/bauhaus/BDD.png'); }
+ .BDNv { content: url('/assets/imgs/combinacoes/bauhaus/BDNv.png');}
+ .BDB  { content: url('/assets/imgs/combinacoes/bauhaus/BDB.png'); }
+ .BDP  { content: url('/assets/imgs/combinacoes/bauhaus/BDP.png'); }
+
+ .BNvN { content: url('/assets/imgs/combinacoes/bauhaus/BNvN.png'); }
+ .BNvD { content: url('/assets/imgs/combinacoes/bauhaus/BNvD.png'); }
+ .BNvNv{ content: url('/assets/imgs/combinacoes/bauhaus/BNvNv.png');}
+ .BNvB { content: url('/assets/imgs/combinacoes/bauhaus/BNvB.png'); }
+ .BNvP { content: url('/assets/imgs/combinacoes/bauhaus/BNvP.png'); }
+
+ .BBN  { content: url('/assets/imgs/combinacoes/bauhaus/BBN.png'); }
+ .BBD  { content: url('/assets/imgs/combinacoes/bauhaus/BBD.png'); }
+ .BBNv { content: url('/assets/imgs/combinacoes/bauhaus/BBNv.png');}
+ .BBB  { content: url('/assets/imgs/combinacoes/bauhaus/BBB.png'); }
+ .BBP  { content: url('/assets/imgs/combinacoes/bauhaus/BBP.png'); }
+
+ .BPN  { content: url('/assets/imgs/combinacoes/bauhaus/BPN.png'); }
+ .BPD  { content: url('/assets/imgs/combinacoes/bauhaus/BPD.png'); }
+ .BPNv { content: url('/assets/imgs/combinacoes/bauhaus/BPNv.png');}
+ .BPB  { content: url('/assets/imgs/combinacoes/bauhaus/BPB.png'); }
+ .BPP  { content: url('/assets/imgs/combinacoes/bauhaus/BPP.png'); }
+ 
+// ------------------------ POP ART ------------------------
+
+ .PNN  { content: url('/assets/imgs/combinacoes/pop-art/PNN.png'); }
+ .PND  { content: url('/assets/imgs/combinacoes/pop-art/PND.png'); }
+ .PNNv { content: url('/assets/imgs/combinacoes/pop-art/PNNv.png');}
+ .PNB  { content: url('/assets/imgs/combinacoes/pop-art/PNB.png'); }
+ .PNP  { content: url('/assets/imgs/combinacoes/pop-art/PNP.png'); }
+
+ .PDN  { content: url('/assets/imgs/combinacoes/pop-art/PDN.png'); }
+ .PDD  { content: url('/assets/imgs/combinacoes/pop-art/PDD.png'); }
+ .PDNv { content: url('/assets/imgs/combinacoes/pop-art/PDNv.png');}
+ .PDB  { content: url('/assets/imgs/combinacoes/pop-art/PDB.png'); }
+ .PDP  { content: url('/assets/imgs/combinacoes/pop-art/PDP.png'); }
+ 
+ .PNvN { content: url('/assets/imgs/combinacoes/pop-art/PNvN.png'); }
+ .PNvD { content: url('/assets/imgs/combinacoes/pop-art/PNvD.png'); }
+ .PNvNv{ content: url('/assets/imgs/combinacoes/pop-art/PNvNv.png');}
+ .PNvB { content: url('/assets/imgs/combinacoes/pop-art/PNvB.png'); }
+ .PNvP { content: url('/assets/imgs/combinacoes/pop-art/PNvP.png'); }
+
+ .PBN  { content: url('/assets/imgs/combinacoes/pop-art/PBN.png'); }
+ .PBD  { content: url('/assets/imgs/combinacoes/pop-art/PBD.png'); }
+ .PBNv { content: url('/assets/imgs/combinacoes/pop-art/PBNv.png');}
+ .PBB  { content: url('/assets/imgs/combinacoes/pop-art/PBB.png'); }
+ .PBP  { content: url('/assets/imgs/combinacoes/pop-art/PBP.png'); }
+
+ .PPN  { content: url('/assets/imgs/combinacoes/pop-art/PPN.png'); }
+ .PPD  { content: url('/assets/imgs/combinacoes/pop-art/PPD.png'); }
+ .PPNv { content: url('/assets/imgs/combinacoes/pop-art/PPNv.png');}
+ .PPB  { content: url('/assets/imgs/combinacoes/pop-art/PPB.png'); }
+ .PPP  { content: url('/assets/imgs/combinacoes/pop-art/PPP.png'); }
 
 }

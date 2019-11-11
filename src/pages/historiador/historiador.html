@@ -1,233 +1,248 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+<ion-content padding>
+  <!--
+  <div id="carregamento"
+    class="DNN DND DNB DNP DDN DDD DDB DDP DBN DBD DBB DBP DPN DPD DPB DPP BNN BND BNB BNP BDN BDD BDB BDP BBN BBD BBB BBP BPN BPD BPB BPP PNN PND PNB PNP PDN PDD PDB PDP PBN PBD PBB PBP PPN PPD PPB PPP">
+  </div>
+  -->
+
+  <!-- Teste de mouseFlow quando subir para site -->
+  <script type="text/javascript">
+    window._mfq = window._mfq || [];
+    (function () {
+      var mf = document.createElement("script");
+      mf.type = "text/javascript"; mf.async = true;
+      mf.src = "//cdn.mouseflow.com/projects/a66f8894-535d-47b9-9065-806d3b2faac8.js";
+      document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
+  </script>
+
+  <div class="botao-voltar-div">
+    <button (click)="voltarPaginaInicial()" style="background: transparent;">
+      <ion-icon class="botaoVoltar"></ion-icon>
     </button>
-    <ion-title>(LOGO) Saiba Mais Design</ion-title>
-  </ion-navbar>
-</ion-header>
+  </div>
 
-<ion-content fullscreen padding>
+  <ion-grid id="gridMaior">
+    <ion-row>
+      <ion-col col-1>
+        <ion-grid id="gridDeBotoes">
+          <ion-row id="linha01">
+            <ion-col id="celulaBotaoArtDeco">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
 
-  <ion-grid id="gridMestre">
-    <ion-row id="linhaMestre">
-      <ion-col col-2 id="colunaDeBotoes">
-        <div style="padding-bottom: 0px">
-          <!--
-          <ion-row>
-            <ion-col>
-              <div>Linha 1</div>
+                  <button ion-fab mini fab-close-active artDeco (click)="exibeDialogoArtDeco()" class="sombraEscolas">
+                    <ion-icon class="botaoArtDeco"></ion-icon>
+                  </button>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorArtDeco()" id="escola-cor-1">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFonteArtDeco()" id="escola-tipografia-1" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutArtDeco()" id="escola-layout-1" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
+                  </ion-fab-list>
+                </ion-fab>
+              </div>
+              <br>
+              <br>
+              <br>
             </ion-col>
           </ion-row>
-          -->
-          <ion-row>
-            <ion-col style="background-color: transparent; border: none;">
-              <div class="divComFab" style="background-color: transparent; border: none; padding-top: 25px">
+
+          <ion-row id="linha02">
+            <ion-col id="celulaBotaoArtNoveau">
+              <div class="divComFab">
                 <ion-fab vertical="center" horizontal="center">
-                  <button ion-fab color="danger">
-                    <ion-icon name="md-share"></ion-icon>
+
+                  <button ion-fab mini fab-close-active artNoveau (click)="exibeDialogoArtNoveau()"
+                    class="sombraEscolas">
+                    <ion-icon class="botaoArtNoveau"></ion-icon>
                   </button>
-                  <ion-fab-list side="right" style="margin: -50px 0px 0px 0px">
-                    <button ion-fab style="zoom:0.8;" color="primary" (click) = "destacaBotao('escola1-tipografia')" id="escola1-tipografia">
-                      <ion-icon name="logo-vimeo"></ion-icon>
-                    </button>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorArtNoveau()" id="escola-cor-2" class="sombraEscolas">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
                   </ion-fab-list>
-                  <ion-fab-list side="right" style="margin: -25px 0px 0px 55px">
-                    <button ion-fab style="zoom:0.8;" color="secondary">
-                      <ion-icon name="logo-facebook"></ion-icon>
-                    </button>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFonteArtNoveau()" id="escola-tipografia-2" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
                   </ion-fab-list>
-                  <ion-fab-list side="right" style="margin: 30px 0px 0px 55px">
-                    <button ion-fab style="zoom:0.8;" color="light">
-                      <ion-icon name="logo-googleplus"></ion-icon>
-                    </button>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutArtNoveau()" id="escola-layout-2" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
                   </ion-fab-list>
-                  <ion-fab-list side="right" style="margin: 50px 0px 0px 0px">
-                    <button ion-fab style="zoom:0.8;" color="dark">
-                      <ion-icon name="logo-twitter"></ion-icon>
-                    </button>
+
+                </ion-fab>
+              </div>
+              <br>
+              <br>
+              <br>
+            </ion-col>
+          </ion-row>
+
+          <ion-row id="linha03">
+            <ion-col id="celulaBotaoBauhaus">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
+
+                  <button ion-fab mini fab-close-active bauhaus (click)="exibeDialogoBauhaus()" class="sombraEscolas">
+                    <ion-icon class="botaoBauhaus"></ion-icon>
+                  </button>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorBauhaus()" id="escola-cor-3" class="sombraEscolas">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFonteBauhaus()" id="escola-tipografia-3" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutBauhaus()" id="escola-layout-3" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
+                  </ion-fab-list>
+                </ion-fab>
+              </div>
+              <br>
+              <br>
+              <br>
+            </ion-col>
+          </ion-row>
+
+          <ion-row id="linha04">
+            <ion-col id="celulaBotaoPopArt">
+              <div class="divComFab">
+                <ion-fab vertical="center" horizontal="center">
+
+                  <button ion-fab mini fab-close-active popArt (click)="exibeDialogoPopArt()" class="sombraEscolas">
+                    <ion-icon class="botaoPopArt"></ion-icon>
+                  </button>
+
+                  <ion-fab-list side="right" style="margin: -10px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaCorPopArt()" id="escola-cor-4" class="sombraEscolas">
+                        <ion-icon class="botaoPaletaCores"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Paleta de cores</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 30px 70px 0px 110px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaFontePopArt()" id="escola-tipografia-4" class="sombraEscolas">
+                        <ion-icon class="botaoTipografia"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Tipografia</span>
+                    </div>
+                  </ion-fab-list>
+
+                  <ion-fab-list side="right" style="margin: 70px 70px 0px 100px">
+                    <div class="tooltip">
+                      <button ion-fab (click)="aplicaLayoutPopArt()" id="escola-layout-4" class="sombraEscolas">
+                        <ion-icon class="botaoLayout"></ion-icon>
+                      </button>
+                      <span class="tooltiptext">Layout</span>
+                    </div>
                   </ion-fab-list>
                 </ion-fab>
               </div>
             </ion-col>
           </ion-row>
-          <ion-row>
-            <ion-col>
-              <div style="background-color: #f7f7f7; border: none; color: #f7f7f7; ">" "</div>
+
+          <ion-row id="linha05">
+            <div style="margin-top: 45px; border: none;">
+              <ion-col id="celulaBotaoReiniciar">
+                <div class="tooltip">
+                  <button (click)="carregaLayoutNormal()" style="background-color: transparent;">
+                    <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
+                  </button>
+                  <span class="tooltiptext">Reiniciar</span>
+                </div>
+              </ion-col>
+              <ion-col id="celulaBotaoAleatorio">
+                <div class="tooltip">
+                  <button (click)="geraModoAleatorio()" style="background-color: transparent;">
+                    <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
+                  </button>
+                  <span class="tooltiptext">Modo Aleatório</span>
+                </div>
+              </ion-col>
+              <ion-col id="celulaBotaoGaleria">
+                <div class="tooltip">
+                  <button (click)="abrirGaleria()" style="background-color: transparent;">
+                    <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
+                  </button>
+                  <span class="tooltiptext">Galeria</span>
+                </div>
+              </ion-col>
+            </div>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col col-11>
+        <ion-grid id="gridDeEstudo">
+          <ion-row id="linha01">
+            <ion-col id="fade">
+              <div id="objetoDeEstudo" class="objetoDeEstudo flex-container" onload="carregaLayoutNormal()">
+                <div id="loading"></div>
+              </div>
+              <div id="divJose">
+                <div id="balaoDeDialogo" class="balaoDeDialogo shadow"></div>
+                <div id="jose" class="jose explicando" (click)="desapareceBalao()"></div>
+              </div>
             </ion-col>
           </ion-row>
-        </div>
-
-        <div style="padding-top: 0px; padding-bottom: 0px">
-            <ion-row>
-              <ion-col>
-                <div>Linha 1</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 2</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 3</div>
-              </ion-col>
-            </ion-row>
-          </div>
-
-          <div style="padding-top: 0px; padding-bottom: 8px">
-              <ion-row>
-                <ion-col>
-                  <div>Linha 1</div>
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>
-                  <div>Linha 2</div>
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>
-                  <div>Linha 3</div>
-                </ion-col>
-              </ion-row>
-            </div>
-
-            <div style="padding-top: 8px">
-                <ion-row>
-                  <ion-col>
-                    <div>Linha 1</div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <div>Linha 2</div>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col>
-                    <div>Linha 3</div>
-                  </ion-col>
-                </ion-row>
-              </div>
-      </ion-col>
-
-      <ion-col col-10 id="colunaDoObjetoDeEstudo">
-        <div>
-          <ion-grid id="gridDoObjetoDeEstudo">
-  
-            <ion-row>
-              <ion-col>
-                <div>Linha 1</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 2</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 3</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 4</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 5</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 6</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 7</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 8</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 9</div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </div>
-        <div>
-          <ion-grid id="gridDaExplicacao">
-            <ion-row>
-              <ion-col>
-                <div>Linha 10</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 11</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div>Linha 12</div>
-              </ion-col>
-            </ion-row>
-  
-          </ion-grid>
-        </div>
+        </ion-grid>
       </ion-col>
     </ion-row>
-
-
-<!--
-    <ion-row>
-      <ion-col>
-        <div>1, 1</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 2</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 3 </div>
-      </ion-col>
-      <ion-col>
-        <div>1, 4</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 5</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 6</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 7</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 8</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 9</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 10</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 11</div>
-      </ion-col>
-      <ion-col>
-        <div>1, 12</div>
-      </ion-col>
-    </ion-row>
-  -->
   </ion-grid>
 
 </ion-content>

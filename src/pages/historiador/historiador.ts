@@ -23,15 +23,11 @@ export class HistoriadorPage {
 
   ionViewDidLoad() {
     this.carregaLayoutNormal();
+    document.getElementById("balaoDeDialogo").style.opacity = "0";
   }
 
   voltarPaginaInicial() {
     this.navCtrl.push(this.homePage);
-  }
-
-
-  acaoBotaoY() {
-    alert('Botão Y');
   }
 
   abrirGaleria() {
@@ -49,11 +45,14 @@ export class HistoriadorPage {
       sufixo += this.caracteristicas[i];
     }
     objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+
+    document.getElementById("balaoDeDialogo").style.opacity = "0";
   }
 
   // -------------- ART DECO --------------
   exibeDialogoArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     var jose = document.getElementById('jose');
     balaoDeDialogo.innerHTML =
       "Art Déco é um estilo de artes visuais, arquitetura e design internacional que começou na Europa, em 1910, e teve o seu apogeu entre os anos 1920 e 1930. O Art Déco era criticado por correntes modernistas por seu excesso de decoração. Por conta disso, acabava beneficiando os mais ricos. Teve seu declínio entre os anos de 1935 e 1939.";
@@ -62,6 +61,7 @@ export class HistoriadorPage {
 
   aplicaLayoutArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "O layout reforça as fortes linhas verticais, os seus ornamentos e as formas aerodinâmicas da Art Deco, que refletiam os arranha-céus, carros, arte, móveis, jóias, moda e até a música da época.";
 
@@ -105,6 +105,7 @@ export class HistoriadorPage {
 
   aplicaCorArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "Cores como prata, ouro, azul metálico e cinzas de carvão também representavam a riqueza e a prosperidade da década de 20. Acabamentos metálicos adicionam brilho, glamour e implicam em luxo e riqueza.";
 
@@ -148,6 +149,7 @@ export class HistoriadorPage {
 
   aplicaFonteArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "A estética da tipografia Art Déco refletia grande parte das transições culturais entre as décadas de 1920 e 1940, quando máquinas, metais e trens de carga começaram a mudar o mundo. As tipografias sem serifa e geométricas são refinadas e elegantes, com maior contraste e junções abruptas.";
 
@@ -195,6 +197,7 @@ export class HistoriadorPage {
     jose.className = "jose confuso";
 
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "Art Nouveau foi um estilo internacional que prosperou no fim do século XIX e começo do século XX. Englobou todas as artes projetuais – arquitetura, design de mobiliário e produto, moda e artes gráficas. Uso da linha orgânica, baseada na natureza. Movimentos lineares naturais dominavam a área espacial e outras propriedades visuais.";
   }
@@ -243,6 +246,7 @@ export class HistoriadorPage {
 
   aplicaCorArtNoveau() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "O Art Nouveau concentra-se fortemente em cores quentes e dessaturadas, dando um ar de desbotado, empoeirado. Quando se adiciona cores quentes, por conta da falta de saturação, obtém-se um efeito romântico, nostálgico, sonhador.";
 
@@ -283,6 +287,7 @@ export class HistoriadorPage {
 
   aplicaFonteArtNoveau() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "A tipologia Art Nouveau é estilizada, elegante e com fontes extremamente decorativas, derivadas de formas orgânicas. Incluem acabamentos decorativos, “cinturas” altas ou baixas, formas triangulares e diagonais dos caracteres, ênfase nas partes superior ou inferior e linhas transversais angulosas";
 
@@ -331,12 +336,14 @@ export class HistoriadorPage {
     jose.className = "jose surpreso";
 
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "Bauhaus foi a primeira escola de Design do mundo. Ela surgiu na Alemanha e é uma das maiores expressões do Modernismo. Características como um leque reduzido de cores, uso de formas geométricas claras e simples e construção da informação visual dentro de um sistema rígido (grid) foram aplicadas a problemas funcionais e à produção mecânica dentro da escola.";
   }
 
   aplicaLayoutBauhaus() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "No layout as formas primárias geométricas definem-se como elementos dinâmicos, bordas que são ultrapassadas e linhas firmes.";
 
@@ -380,6 +387,7 @@ export class HistoriadorPage {
 
   aplicaCorBauhaus() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "Forte uso das cores primárias e vibrantes eram tomadas como ponto de partida para qualquer produção. As cores também eram representadas pelas formas primárias (vermelho = quadrado, triângulo = amarelo, azul = circulo).";
 
@@ -419,6 +427,7 @@ export class HistoriadorPage {
 
   aplicaFonteBauhaus() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "A Bauhaus utiliza de uma tipografia mais moderna, enxuta e precisa, com princípios do construtivismo. Mistura versões condensadas e expandidas de fontes góticas e sem serifa.";
 
@@ -466,12 +475,14 @@ export class HistoriadorPage {
     jose.className = "jose explicando";
 
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "O Pop Art surge em meados de 1950, na Inglaterra, mas alcança sua maior fama nos Estados Unidos em 1960. O movimento buscava unir a familiaridade da sociedade com a cultura de consumo e de massa. O resultado eram imagens que documentavam, ao mesmo tempo que parodiavam, conceitos familiares dos Estados Unidos modernos.";
   }
 
   aplicaLayoutPopArt() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "O layout traz a estética dos quadrinhos que o artista Roy Lichtenstein usava como uma forma de criticar a cultura de massas, o consumismo e a economia doméstica.";
 
@@ -516,6 +527,7 @@ export class HistoriadorPage {
 
   aplicaCorPopArt() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "O design pop inspirava-se nas cores do arco íris: saturadas e contrastantes. Tons vibrantes para criar deliberadamente efeitos ópticos dissonantes.";
 
@@ -556,6 +568,7 @@ export class HistoriadorPage {
 
   aplicaFontePopArt() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "A tipografia Pop Art geralmente eram manuscritos, posteriormente com referências ao Art Nouveau, até mesmo psicodélicos. Chamativa, principalmente ligada ao consumismo e à venda exagerada.";
 
@@ -610,6 +623,7 @@ export class HistoriadorPage {
 
   geraModoAleatorio() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+    balaoDeDialogo.style.opacity = "1";
     balaoDeDialogo.innerHTML =
       "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
 

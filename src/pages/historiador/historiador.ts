@@ -644,5 +644,6 @@ export class HistoriadorPage {
 
     objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
   }
+  
 
 }

@@ -193,7 +193,7 @@
               </div>
             </ion-col>
           </ion-row>
-
+          <!--
           <ion-row id="linha05">
             <div style="margin-top: 45px; border: none;">
               <ion-col id="celulaBotaoReiniciar">
@@ -222,6 +222,7 @@
               </ion-col>
             </div>
           </ion-row>
+        -->
         </ion-grid>
       </ion-col>
       <ion-col col-11>
@@ -242,4 +243,33 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <div class = "divBotoesInferiores">
+        <ion-col id="celulaBotaoReiniciar">
+          <div class="tooltip">
+            <button (click)="carregaLayoutNormal()" style="background-color: transparent;">
+              <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
+            </button>
+            <span class="tooltiptext">Reiniciar</span>
+          </div>
+        </ion-col>
+        <ion-col id="celulaBotaoAleatorio">
+          <div class="tooltip">
+            <button (click)="geraModoAleatorio()" style="background-color: transparent;">
+              <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
+            </button>
+            <span class="tooltiptext">Modo Aleatório</span>
+          </div>
+        </ion-col>
+        <ion-col id="celulaBotaoGaleria">
+          <div class="tooltip">
+            <button (click)="abrirGaleria()" style="background-color: transparent;">
+              <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
+            </button>
+            <span class="tooltiptext">Galeria</span>
+          </div>
+        </ion-col>
+      </div>
+
+
 </ion-content>

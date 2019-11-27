@@ -8,7 +8,9 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+
+    "gh-pages": "ng build --base-href 'https://pedro-pereira.github.io/smdesign/' --prod && npx ngh --dir=www/"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",

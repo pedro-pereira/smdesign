@@ -2,15 +2,15 @@
   "name": "smdesign",
   "version": "0.0.1",
   "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "homepage": "https://pedro-pereira.github.io/smdesign/",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-
-    "gh-pages": "ng build --base-href 'https://pedro-pereira.github.io/smdesign/' --prod && npx ngh --dir=www/"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",

@@ -21,7 +21,7 @@ page-home {
     .div-botoes {
         display: inline-flex;
         position: absolute;
-        margin-left: 60%;
+        margin-left: 64.5%;
         margin-top: 30%;
         transform: scale(1.5);
     }
@@ -31,5 +31,9 @@ page-home {
         color: transparent;
         box-shadow:  0px 7px 10px black;
         border-radius: 100%;
+    }
+
+    .colunaBotaoIniciar {
+        margin-right: 25px;
     }
 }

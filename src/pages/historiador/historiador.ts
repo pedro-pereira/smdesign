@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { GaleriaPage } from '../galeria/galeria';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
 @Component({
   selector: 'page-historiador',
@@ -21,7 +21,7 @@ export class HistoriadorPage {
   botaoDeLayoutAtivo = [1, 1, 1, 1];
   bonecoAcordado = true;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -42,6 +42,7 @@ export class HistoriadorPage {
     this.caracteristicas[1] = "N";
     this.caracteristicas[2] = "N";
     var objetoDeEstudo = document.getElementById("imagem1");
+    var novoObjetoDeEstudo = document.getElementById("imagem2");
     var sufixo = "";
 
     for (var i = 0; i < this.caracteristicas.length; i++) {
@@ -49,7 +50,8 @@ export class HistoriadorPage {
     }
 
     objetoDeEstudo.className = sufixo;
-
+    novoObjetoDeEstudo.className = sufixo;
+   
     document.getElementById("balaoDeDialogo").style.opacity = "0";
   }
 
@@ -220,7 +222,7 @@ export class HistoriadorPage {
   }
 
   aplicaLayoutArtNoveau() {
-    
+
     if (this.bonecoAcordado) {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML = "O layout Art Nouveau caracteriza-se pelo uso de ornamentos florais, traçados curvilíneos com fortes contornos como numa moldura. As flores, os arcos, as formas da natureza trazem a ideia de movimento às obras.";
@@ -673,6 +675,7 @@ export class HistoriadorPage {
       balaoDeDialogo.innerHTML =
         "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
     }
+
     var escolas = ["D", "Nv", "B", "P", "N"];
 
     var escolaEscolhida;
@@ -735,4 +738,25 @@ export class HistoriadorPage {
     }
   }
 
+  recarregaAplicacao() {
+    const confirm = this.alertCtrl.create({
+      title: 'Reiniciar o infográfico?',
+      message: 'Tem certeza que deseja reiniciar o visual do infográfico?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Ok',
+          handler: () => {
+            this.carregaLayoutNormal();
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
 }

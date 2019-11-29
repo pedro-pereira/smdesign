@@ -15,6 +15,7 @@ export class HistoriadorPage {
   galeriaPage: any = GaleriaPage;
 
   // caracteristicas[layout, cor, tipografia]
+  // botoes [D, Nv, B, P]
   caracteristicas = ["N", "N", "N"];
   botaoDeCorAtivo = [1, 1, 1, 1];
   botaoDeTipografiaAtivo = [1, 1, 1, 1];
@@ -51,7 +52,7 @@ export class HistoriadorPage {
 
     objetoDeEstudo.className = sufixo;
     novoObjetoDeEstudo.className = sufixo;
-   
+
     document.getElementById("balaoDeDialogo").style.opacity = "0";
   }
 
@@ -76,12 +77,6 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "O layout reforça as fortes linhas verticais, os seus ornamentos e as formas aerodinâmicas da Art Deco, que refletiam os arranha-céus, carros, arte, móveis, jóias, moda e até a música da época.";
-      /*
-      var typing = null;
-      typing();
-      typing = Typing(texto);
-      typing();
-      */
     }
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-1").style.opacity != "1") {
@@ -676,6 +671,7 @@ export class HistoriadorPage {
         "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
     }
 
+    var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
     var escolas = ["D", "Nv", "B", "P", "N"];
 
     var escolaEscolhida;
@@ -684,14 +680,92 @@ export class HistoriadorPage {
       this.caracteristicas[i] = escolas[escolaEscolhida];
     }
 
-    var objetoDeEstudo = document.getElementById('objetoDeEstudo');
     var sufixo = "";
 
     for (var i = 0; i < this.caracteristicas.length; i++) {
       sufixo += this.caracteristicas[i];
     }
 
-    objetoDeEstudo.className = "objetoDeEstudo flex-container" + " " + sufixo;
+    var velhoObjetoDeEstudo = document.getElementById("imagem1");
+    velhoObjetoDeEstudo.className = classeAntiga;
+
+    var novoObjetoDeEstudo = document.getElementById("imagem2");
+    novoObjetoDeEstudo.className = sufixo;
+    novoObjetoDeEstudo.style.position = "relative";
+    novoObjetoDeEstudo.style.left = "-982px";
+
+    this.fadeOut(velhoObjetoDeEstudo, 1);
+    this.fadeIn(novoObjetoDeEstudo, 1); 
+  
+    switch(this.caracteristicas[0]) {
+      case "D" :
+        this.botaoDeLayoutAtivo = [1, 0, 0, 0];
+        break;
+      case "Nv" :
+        this.botaoDeLayoutAtivo = [0, 1, 0, 0];
+        break;
+      case "B" :
+        this.botaoDeLayoutAtivo = [0, 0, 1, 0];
+        break;
+      case "P" :
+        this.botaoDeLayoutAtivo = [0, 0, 0, 1];
+        break;
+    }
+
+    switch(this.caracteristicas[1]) {
+      case "D" :
+        this.botaoDeCorAtivo = [1, 0, 0, 0];
+        break;
+      case "Nv" :
+        this.botaoDeCorAtivo = [0, 1, 0, 0];
+        break;
+      case "B" :
+        this.botaoDeCorAtivo = [0, 0, 1, 0];
+        break;
+      case "P" :
+        this.botaoDeCorAtivo = [0, 0, 0, 1];
+        break;
+    }
+
+    switch(this.caracteristicas[2]) {
+      case "D" :
+        this.botaoDeTipografiaAtivo = [1, 0, 0, 0];
+        break;
+      case "Nv" :
+        this.botaoDeTipografiaAtivo = [0, 1, 0, 0];
+        break;
+      case "B" :
+        this.botaoDeTipografiaAtivo = [0, 0, 1, 0];
+        break;
+      case "P" :
+        this.botaoDeTipografiaAtivo = [0, 0, 0, 1];
+        break;
+    }
+
+    for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
+      if (this.botaoDeCorAtivo[i] !== 1) {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+
+    for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
+      if (this.botaoDeTipografiaAtivo[i] !== 1) {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+
+    for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
+      if (this.botaoDeLayoutAtivo[i] !== 1) {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+      } else {
+        document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 1;");
+      }
+    }
+
   }
 
   fadeIn(element, time) {

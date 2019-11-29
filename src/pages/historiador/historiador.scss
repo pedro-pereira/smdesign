@@ -56,7 +56,7 @@ page-historiador {
     transform: scale(0.8);
     content: url('/assets/imgs/botao-voltar.png');
     position: relative;
-    box-shadow: 0px 7px 10px black;
+    box-shadow: 1px 5px 6px 3px #4242428f;
     border-radius: 100%;
   }
 
@@ -209,7 +209,7 @@ page-historiador {
   .botaoCelula {
     background-color: transparent;
     color: transparent;
-    box-shadow:  0px 7px 10px black;
+    box-shadow:  1px 5px 6px 3px #4242428f;
     border-radius: 100%;
   }
 
@@ -248,7 +248,7 @@ page-historiador {
   }
 
   .sombraEscolas{
-    box-shadow: 0px 7px 10px black;
+    box-shadow: 1px 5px 6px 3px #4242428f;
   }
 
   // ----------------------- PERSONAGEM JOSE ----------------------- INI ---
@@ -272,7 +272,7 @@ page-historiador {
     cursor: pointer;
     background-color: transparent;
     color: transparent;
-    box-shadow:  0px 7px 10px black;
+    box-shadow:  12px 9px 60px 40px #4242428f;
     border-radius: 100%;  
     -webkit-transition: 2s linear;    
     bottom: 260%;
@@ -316,9 +316,10 @@ page-historiador {
     width: 90%;
     height: 100%;
     margin-top: 10px;
-    background: #3D5971;
-    color: white;
+    background: #F2F0E9;
+    color: #58585A;
     font-family: 'Champagne e Limousines';
+    font-weight: bold;
     font-size: 14pt;
     position: relative;
     padding: 1%;
@@ -349,7 +350,7 @@ page-historiador {
     box-shadow:         3px 3px 5px 6px black;
     */
 
-    box-shadow: 0px 0px 20px 20px #4242428f;
+    box-shadow: 12px 9px 20px 20px #4242428f;
   }
 
   // ----------------------- PERSONAGEM JOSE ----------------------- FIM ---
@@ -514,5 +515,23 @@ page-historiador {
  .PPNv { content: url('/assets/imgs/combinacoes/pop-art/PPNv.png');}
  .PPB  { content: url('/assets/imgs/combinacoes/pop-art/PPB.png'); }
  .PPP  { content: url('/assets/imgs/combinacoes/pop-art/PPP.png'); }
+
+ .alert-wrapper {
+    background-color: #F5F3E9;
+ }
+
+ .alert-md .alert-title {
+  font-family: 'Champagne e Limousines';
+  font-size: 16px; 
+ }
+
+ .alert-md .alert-message {
+  font-family: 'Champagne e Limousines';
+  font-size: 16px;
+ }
+
+ .alert-button alert-button-md alert-button-default alert-button-default-md {
+ background: url("/assets/imgs/personagem/jose-feliz.png") no-repeat;
+ }
 
 }

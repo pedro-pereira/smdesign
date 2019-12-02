@@ -12,11 +12,11 @@ export class GaleriaPage {
   historiadorPage: any = HistoriadorPage;
 
   constructor(public navCtrl: NavController) {
-    
+
   }
 
   voltarPaginaHistoriador() {
-    this.navCtrl.push(this.historiadorPage);
+    this.navCtrl.setRoot(this.historiadorPage);
   }
 
   slides = [

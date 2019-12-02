@@ -24,21 +24,39 @@ export class HistoriadorPage {
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
+  //Começar com os botões desselecionados
+  desselecionaBotoes(){
+    for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
+      document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+
+    }
+    for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
+      document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+    }
+    for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
+      document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+    }
+  }
 
   ionViewDidLoad() {
     this.carregaLayoutNormal();
     document.getElementById("balaoDeDialogo").style.opacity = "0";
+    this.desselecionaBotoes();
+
+
   }
 
   voltarPaginaInicial() {
-    this.navCtrl.push(this.homePage);
+    this.navCtrl.setRoot(this.homePage);
   }
 
   abrirGaleria() {
-    this.navCtrl.push(this.galeriaPage);
+    this.navCtrl.setRoot(this.galeriaPage);
   }
 
   carregaLayoutNormal() {
+
+    this.desselecionaBotoes();
     this.caracteristicas[0] = "N";
     this.caracteristicas[1] = "N";
     this.caracteristicas[2] = "N";
@@ -68,8 +86,13 @@ export class HistoriadorPage {
         "Art Déco é um estilo de artes visuais, arquitetura e design internacional que começou na Europa, em 1910, e teve o seu apogeu entre os anos 1920 e 1930. O Art Déco era criticado por correntes modernistas por seu excesso de decoração. Por conta disso, acabava beneficiando os mais ricos. Teve seu declínio entre os anos de 1935 e 1939.";
       // var typing = Typing(texto);
       // typing();
+    }else{
+      var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+      balaoDeDialogo.innerHTML =
+        "Art Déco é um estilo de artes visuais, arquitetura e design internacional que começou na Europa, em 1910, e teve o seu apogeu entre os anos 1920 e 1930. O Art Déco era criticado por correntes modernistas por seu excesso de decoração. Por conta disso, acabava beneficiando os mais ricos. Teve seu declínio entre os anos de 1935 e 1939.";
     }
   }
+
 
   aplicaLayoutArtDeco() {
     if (this.bonecoAcordado) {
@@ -199,7 +222,7 @@ export class HistoriadorPage {
     }
   }
 
-  // -------------- ART NOVEAU --------------
+// -------------- ART NOVEAU --------------
   exibeDialogoArtNoveau() {
     if (this.bonecoAcordado) {
       var jose = document.getElementById('jose');
@@ -213,6 +236,10 @@ export class HistoriadorPage {
       var typing = Typing(texto);
       typing();
       */
+    }else{
+      var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+      balaoDeDialogo.innerHTML =
+        "Art Nouveau foi um estilo internacional que prosperou no fim do século XIX e começo do século XX. Englobou todas as artes projetuais – arquitetura, design de mobiliário e produto, moda e artes gráficas. Uso da linha orgânica, baseada na natureza. Movimentos lineares naturais dominavam a área espacial e outras propriedades visuais.";
     }
   }
 
@@ -344,7 +371,7 @@ export class HistoriadorPage {
     }
   }
 
-  // -------------- BAUHAUS --------------
+// -------------- BAUHAUS --------------
   exibeDialogoBauhaus() {
     if (this.bonecoAcordado) {
       var jose = document.getElementById('jose');
@@ -358,6 +385,10 @@ export class HistoriadorPage {
       var typing = Typing(texto);
       typing();
       */
+    }else{
+      var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+      balaoDeDialogo.innerHTML =
+        "Bauhaus foi a primeira escola de Design do mundo. Ela surgiu na Alemanha e é uma das maiores expressões do Modernismo. Características como um leque reduzido de cores, uso de formas geométricas claras e simples e construção da informação visual dentro de um sistema rígido (grid) foram aplicadas a problemas funcionais e à produção mecânica dentro da escola.";
     }
   }
 
@@ -438,6 +469,7 @@ export class HistoriadorPage {
       this.fadeOut(velhoObjetoDeEstudo, 1);
       this.fadeIn(novoObjetoDeEstudo, 1);
 
+
       this.botaoDeCorAtivo = [0, 0, 1, 0];
       for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
         if (this.botaoDeCorAtivo[i] !== 1) {
@@ -493,7 +525,7 @@ export class HistoriadorPage {
     }
   }
 
-  // -------------- POP ART --------------
+// -------------- POP ART --------------
   exibeDialogoPopArt() {
     if (this.bonecoAcordado) {
       var jose = document.getElementById('jose');
@@ -507,6 +539,11 @@ export class HistoriadorPage {
       var typing = Typing(texto);
       typing();
       */
+    }else{
+      var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+      balaoDeDialogo.innerHTML =
+        "O Pop Art surge em meados de 1950, na Inglaterra, mas alcança sua maior fama nos Estados Unidos em 1960. O movimento buscava unir a familiaridade da sociedade com a cultura de consumo e de massa. O resultado eram imagens que documentavam, ao mesmo tempo que parodiavam, conceitos familiares dos Estados Unidos modernos.";
+
     }
   }
 
@@ -642,24 +679,32 @@ export class HistoriadorPage {
     }
   }
 
-  // José Carlos mimimamedezim
+// José Carlos mimimamedezim
   desapareceBalao() {
-    console.log('antes do clique: ' + this.bonecoAcordado);
-    this.bonecoAcordado = !this.bonecoAcordado;
-    console.log('após o clique: ' + this.bonecoAcordado);
-    if (!this.bonecoAcordado) {
-      var jose = document.getElementById('jose');
-      jose.className = "jose dormindo";
+    if(document.getElementById("balaoDeDialogo").innerHTML.trim()!=""){
+     // console.log('antes do clique: ' + this.bonecoAcordado);
+      this.bonecoAcordado = !this.bonecoAcordado;
+      //console.log('após o clique: ' + this.bonecoAcordado);
+      if (!this.bonecoAcordado) {
+        var jose = document.getElementById('jose');
+        jose.className = "jose dormindo";
 
-      var opacidade = document.getElementById("balaoDeDialogo").style.opacity;
-      if (opacidade != "1" && opacidade != "") {
-        document.getElementById("balaoDeDialogo").style.opacity = "1";
+        var opacidade = document.getElementById("balaoDeDialogo").style.opacity;
+        if (opacidade != "1" && opacidade != "") {
+          document.getElementById("balaoDeDialogo").style.opacity = "1";
+        } else {
+          document.getElementById("balaoDeDialogo").style.opacity = "0";
+        }
       } else {
-        document.getElementById("balaoDeDialogo").style.opacity = "0";
+        var jose = document.getElementById('jose');
+        jose.className = "jose explicando";
+        var opacidade = document.getElementById("balaoDeDialogo").style.opacity;
+        if (opacidade != "1" && opacidade != "") {
+          document.getElementById("balaoDeDialogo").style.opacity = "1";
+        } else {
+          document.getElementById("balaoDeDialogo").style.opacity = "0";
+        }
       }
-    } else {
-      var jose = document.getElementById('jose');
-      jose.className = "jose explicando";
     }
   }
 
@@ -667,6 +712,10 @@ export class HistoriadorPage {
     if (this.bonecoAcordado) {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.style.opacity = "1";
+      balaoDeDialogo.innerHTML =
+        "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
+    }else{
+      var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML =
         "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
     }
@@ -695,8 +744,8 @@ export class HistoriadorPage {
     novoObjetoDeEstudo.style.left = "-982px";
 
     this.fadeOut(velhoObjetoDeEstudo, 1);
-    this.fadeIn(novoObjetoDeEstudo, 1); 
-  
+    this.fadeIn(novoObjetoDeEstudo, 1);
+
     switch(this.caracteristicas[0]) {
       case "D" :
         this.botaoDeLayoutAtivo = [1, 0, 0, 0];
@@ -709,6 +758,9 @@ export class HistoriadorPage {
         break;
       case "P" :
         this.botaoDeLayoutAtivo = [0, 0, 0, 1];
+        break;
+      case "N":
+        this.botaoDeLayoutAtivo = [0, 0, 0, 0];
         break;
     }
 
@@ -725,6 +777,9 @@ export class HistoriadorPage {
       case "P" :
         this.botaoDeCorAtivo = [0, 0, 0, 1];
         break;
+      case "N":
+        this.botaoDeCorAtivo = [0, 0, 0, 0];
+        break;
     }
 
     switch(this.caracteristicas[2]) {
@@ -739,6 +794,9 @@ export class HistoriadorPage {
         break;
       case "P" :
         this.botaoDeTipografiaAtivo = [0, 0, 0, 1];
+        break;
+      case "N":
+        this.botaoDeTipografiaAtivo = [0, 0, 0, 0];
         break;
     }
 
@@ -773,6 +831,7 @@ export class HistoriadorPage {
   }
 
   fadeOut(element, time) {
+
     this.processa(element, time, 100, 0);
   }
 
@@ -780,20 +839,22 @@ export class HistoriadorPage {
     var increment, opc, intervalo;
     if (initial == 0) {
       increment = 2;
-      //element.style.display = "block";
-    } else {
+      element.style.display = "block";
+    } else{
       increment = -2;
     }
 
     opc = initial;
 
     intervalo = setInterval(function () {
+
       if ((opc == end)) {
         if (end == 0) {
           element.style.display = "block";
         }
         clearInterval(intervalo);
       } else {
+
         opc += increment;
         element.style.opacity = opc / 100;
         element.style.filter = "alpha(opacity=" + opc + ")";
@@ -820,17 +881,24 @@ export class HistoriadorPage {
         {
           text: 'Cancelar',
           handler: () => {
-            console.log('Disagree clicked');
+            //console.log('Disagree clicked');
           }
         },
         {
           text: 'Ok',
           handler: () => {
             this.carregaLayoutNormal();
+            this.desselecionaBotoes();
+
           }
         }
       ]
     });
+
+
     confirm.present();
   }
+
+
+
 }

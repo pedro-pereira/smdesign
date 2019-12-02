@@ -22,7 +22,7 @@ page-historiador {
     border: solid 1px #ddd;
     padding: 0px;
   }
-  
+
   .scroll-content {
     padding-top: 0px;
     padding-bottom: 16px;
@@ -82,7 +82,7 @@ page-historiador {
     margin: auto;
     background: rgba(237, 237, 222, 0.0);
     min-height: 80px;
-    background-color: transparent; 
+    background-color: transparent;
     border: none;
   }
 
@@ -173,7 +173,7 @@ page-historiador {
     font-family: 'Champagne e Limousines';
     font-size: 16px;
   }
-  
+
   .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -184,7 +184,7 @@ page-historiador {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
   }
-  
+
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -199,7 +199,7 @@ page-historiador {
     height: 93vh;
     max-height: 93vh;
     border-radius: 20px;
-  } 
+  }
 
   #gridMaior{
     width: 1100px;
@@ -218,8 +218,8 @@ page-historiador {
     left: 7vw;
     z-index: 1;
   }
-  
-  #celulaBotaoReiniciar {  
+
+  #celulaBotaoReiniciar {
     z-index: 1;
   }
 
@@ -273,17 +273,17 @@ page-historiador {
     background-color: transparent;
     color: transparent;
     box-shadow:  12px 9px 60px 40px #4242428f;
-    border-radius: 100%;  
-    -webkit-transition: 2s linear;    
+    border-radius: 100%;
+    -webkit-transition: 2s linear;
     bottom: 260%;
-    right: -70%;  
+    right: -70%;
   }
 
   .explicando {
     content: url("/assets/imgs/personagem/jose-explicando.png");
   }
 
-  .feliz {  
+  .feliz {
     content: url("/assets/imgs/personagem/jose-feliz.png");
   }
 
@@ -291,11 +291,11 @@ page-historiador {
     content: url("/assets/imgs/personagem/jose-confuso.png");
   }
 
-  .surpreso {  
+  .surpreso {
     content: url("/assets/imgs/personagem/jose-feliz.png");
   }
 
-  .dormindo {  
+  .dormindo {
     content: url("/assets/imgs/personagem/jose-dormindo.png");
   }
 
@@ -329,7 +329,7 @@ page-historiador {
     opacity: 1;
   }
 
-   
+
   .balaoDeDialogo:before {
     // content: "";
     width: 0px;
@@ -355,6 +355,10 @@ page-historiador {
 
   // ----------------------- PERSONAGEM JOSE ----------------------- FIM ---
 
+  //--------------------Reiniciar botão --------------------
+  .teste{
+    overflow: hidden;
+  }
 
 // ------------------------ NORMAL ------------------------
 
@@ -483,7 +487,7 @@ page-historiador {
  .BPNv { content: url('/assets/imgs/combinacoes/bauhaus/BPNv.png');}
  .BPB  { content: url('/assets/imgs/combinacoes/bauhaus/BPB.png'); }
  .BPP  { content: url('/assets/imgs/combinacoes/bauhaus/BPP.png'); }
- 
+
 // ------------------------ POP ART ------------------------
 
  .PNN  { content: url('/assets/imgs/combinacoes/pop-art/PNN.png'); }
@@ -497,7 +501,7 @@ page-historiador {
  .PDNv { content: url('/assets/imgs/combinacoes/pop-art/PDNv.png');}
  .PDB  { content: url('/assets/imgs/combinacoes/pop-art/PDB.png'); }
  .PDP  { content: url('/assets/imgs/combinacoes/pop-art/PDP.png'); }
- 
+
  .PNvN { content: url('/assets/imgs/combinacoes/pop-art/PNvN.png'); }
  .PNvD { content: url('/assets/imgs/combinacoes/pop-art/PNvD.png'); }
  .PNvNv{ content: url('/assets/imgs/combinacoes/pop-art/PNvNv.png');}
@@ -522,7 +526,7 @@ page-historiador {
 
  .alert-md .alert-title {
   font-family: 'Champagne e Limousines';
-  font-size: 16px; 
+  font-size: 16px;
  }
 
  .alert-md .alert-message {

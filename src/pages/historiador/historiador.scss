@@ -37,7 +37,7 @@ page-historiador {
   }
 
   .fab-md-in-list {
-    background-color: rgb(245, 230, 227);
+    background-color: #F5F3E9;
   }
 
   .botaoPaletaCores {
@@ -265,18 +265,22 @@ page-historiador {
   }
 
   .jose {
-    display: block;
     position: relative;
     transform: scale(0.3);
     content: url("/assets/imgs/personagem/jose-explicando.png");
     cursor: pointer;
+    border-radius: 100%;
+    -webkit-transition: 2s linear;
+    bottom: 307%;
+    right: -65%;
+    /*
+    display: block;
     background-color: transparent;
     color: transparent;
     box-shadow:  12px 9px 60px 40px #4242428f;
-    border-radius: 100%;  
-    -webkit-transition: 2s linear;    
     bottom: 260%;
-    right: -70%;  
+    right: -70%;
+    */
   }
 
   .explicando {

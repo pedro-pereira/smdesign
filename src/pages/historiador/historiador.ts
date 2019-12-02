@@ -27,7 +27,6 @@ export class HistoriadorPage {
 
   ionViewDidLoad() {
     this.carregaLayoutNormal();
-    document.getElementById("balaoDeDialogo").style.opacity = "0";
   }
 
   voltarPaginaInicial() {
@@ -53,7 +52,12 @@ export class HistoriadorPage {
     objetoDeEstudo.className = sufixo;
     novoObjetoDeEstudo.className = sufixo;
 
-    document.getElementById("balaoDeDialogo").style.opacity = "0";
+    if (this.bonecoAcordado) {
+      var balaoDeDialogo = document.getElementById('balaoDeDialogo');
+      balaoDeDialogo.style.opacity = "1";
+      balaoDeDialogo.innerHTML =
+        "Olá! Eu sou José. Estou aqui para te ajudar a entender melhor as mudanças que ocorrerão na tela conforme você for alterando a tipografia, a cor ou o layout. Vamos lá?";
+    }
   }
 
   // -------------- ART DECO --------------
@@ -103,9 +107,18 @@ export class HistoriadorPage {
       this.botaoDeLayoutAtivo = [1, 0, 0, 0];
       for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
         if (this.botaoDeLayoutAtivo[i] !== 1) {
-          document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
+         // document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "scale(0.85);");
+          var botoes = document.getElementsByClassName('botaoLayout');
+          console.log(botoes);
+          for(var j = 0; j < botoes.length; j++){
+            botoes[j].setAttribute("style", "scale(0.85);");
+          }
         } else {
-          document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 1;");
+          //document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "scale(1);");
+          var botoes = document.getElementsByClassName('botaoLayout');
+          for(var j = 0; j < botoes.length; j++){
+            botoes[j].setAttribute("style", "scale(1);");
+          }
         }
       }
     }

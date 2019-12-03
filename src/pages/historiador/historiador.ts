@@ -682,7 +682,7 @@ export class HistoriadorPage {
 // José Carlos mimimamedezim
   desapareceBalao() {
     if(document.getElementById("balaoDeDialogo").innerHTML.trim()!=""){
-     // console.log('antes do clique: ' + this.bonecoAcordado);
+      // console.log('antes do clique: ' + this.bonecoAcordado);
       this.bonecoAcordado = !this.bonecoAcordado;
       //console.log('após o clique: ' + this.bonecoAcordado);
       if (!this.bonecoAcordado) {
@@ -827,12 +827,16 @@ export class HistoriadorPage {
   }
 
   fadeIn(element, time) {
-    this.processa(element, time, 0, 100);
+    if(element.style.opacity==0 || element.style.opacity==1){
+      this.processa(element, time, 0, 100);
+    }
   }
 
   fadeOut(element, time) {
+    if(element.style.opacity==0 || element.style.opacity==1){
+      this.processa(element, time, 100, 0);
 
-    this.processa(element, time, 100, 0);
+    }
   }
 
   processa(element, time, initial, end) {

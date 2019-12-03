@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { GaleriaPage } from '../galeria/galeria';
-// import * as $ from 'jquery';
 
 @Component({
   selector: 'page-historiador',
@@ -14,8 +13,6 @@ export class HistoriadorPage {
   homePage: any = HomePage;
   galeriaPage: any = GaleriaPage;
 
-  // caracteristicas[layout, cor, tipografia]
-  // botoes [D, Nv, B, P]
   caracteristicas = ["N", "N", "N"];
   botaoDeCorAtivo = [1, 1, 1, 1];
   botaoDeTipografiaAtivo = [1, 1, 1, 1];
@@ -24,15 +21,17 @@ export class HistoriadorPage {
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
+
   //Começar com os botões desselecionados
-  desselecionaBotoes(){
+  desselecionaBotoes() {
     for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
       document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
-
     }
+
     for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
       document.getElementById('escola-cor-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
     }
+
     for (var i = 0; i < this.botaoDeTipografiaAtivo.length; i++) {
       document.getElementById('escola-tipografia-' + (i + 1)).setAttribute("style", "opacity: 0.5;");
     }
@@ -53,7 +52,6 @@ export class HistoriadorPage {
   }
 
   carregaLayoutNormal() {
-
     this.desselecionaBotoes();
     this.caracteristicas[0] = "N";
     this.caracteristicas[1] = "N";
@@ -87,15 +85,12 @@ export class HistoriadorPage {
 
       balaoDeDialogo.innerHTML =
         "Art Déco é um estilo de artes visuais, arquitetura e design internacional que começou na Europa, em 1910, e teve o seu apogeu entre os anos 1920 e 1930. O Art Déco era criticado por correntes modernistas por seu excesso de decoração. Por conta disso, acabava beneficiando os mais ricos. Teve seu declínio entre os anos de 1935 e 1939.";
-      // var typing = Typing(texto);
-      // typing();
-    }else{
+    } else {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML =
         "Art Déco é um estilo de artes visuais, arquitetura e design internacional que começou na Europa, em 1910, e teve o seu apogeu entre os anos 1920 e 1930. O Art Déco era criticado por correntes modernistas por seu excesso de decoração. Por conta disso, acabava beneficiando os mais ricos. Teve seu declínio entre os anos de 1935 e 1939.";
     }
   }
-
 
   aplicaLayoutArtDeco() {
     if (this.bonecoAcordado) {
@@ -129,16 +124,16 @@ export class HistoriadorPage {
       this.botaoDeLayoutAtivo = [1, 0, 0, 0];
       for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
         if (this.botaoDeLayoutAtivo[i] !== 1) {
-         // document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "scale(0.85);");
+          // document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "scale(0.85);");
           var botoes = document.getElementsByClassName('botaoLayout');
           console.log(botoes);
-          for(var j = 0; j < botoes.length; j++){
+          for (var j = 0; j < botoes.length; j++) {
             botoes[j].setAttribute("style", "scale(0.85);");
           }
         } else {
           //document.getElementById('escola-layout-' + (i + 1)).setAttribute("style", "scale(1);");
           var botoes = document.getElementsByClassName('botaoLayout');
-          for(var j = 0; j < botoes.length; j++){
+          for (var j = 0; j < botoes.length; j++) {
             botoes[j].setAttribute("style", "scale(1);");
           }
         }
@@ -152,11 +147,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "Cores como prata, ouro, azul metálico e cinzas de carvão também representavam a riqueza e a prosperidade da década de 20. Acabamentos metálicos adicionam brilho, glamour e implicam em luxo e riqueza.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-1").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -196,11 +188,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "A estética da tipografia Art Déco refletia grande parte das transições culturais entre as décadas de 1920 e 1940, quando máquinas, metais e trens de carga começaram a mudar o mundo. As tipografias sem serifa e geométricas são refinadas e elegantes, com maior contraste e junções abruptas.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-1").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -234,7 +223,7 @@ export class HistoriadorPage {
     }
   }
 
-// -------------- ART NOVEAU --------------
+  // -------------- ART NOVEAU --------------
   exibeDialogoArtNoveau() {
     if (this.bonecoAcordado) {
       var jose = document.getElementById('jose');
@@ -244,11 +233,7 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "Art Nouveau foi um estilo internacional que prosperou no fim do século XIX e começo do século XX. Englobou todas as artes projetuais – arquitetura, design de mobiliário e produto, moda e artes gráficas. Uso da linha orgânica, baseada na natureza. Movimentos lineares naturais dominavam a área espacial e outras propriedades visuais.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
-    }else{
+    } else {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML =
         "Art Nouveau foi um estilo internacional que prosperou no fim do século XIX e começo do século XX. Englobou todas as artes projetuais – arquitetura, design de mobiliário e produto, moda e artes gráficas. Uso da linha orgânica, baseada na natureza. Movimentos lineares naturais dominavam a área espacial e outras propriedades visuais.";
@@ -256,7 +241,6 @@ export class HistoriadorPage {
   }
 
   aplicaLayoutArtNoveau() {
-
     if (this.bonecoAcordado) {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML = "O layout Art Nouveau caracteriza-se pelo uso de ornamentos florais, traçados curvilíneos com fortes contornos como numa moldura. As flores, os arcos, as formas da natureza trazem a ideia de movimento às obras.";
@@ -301,11 +285,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "O Art Nouveau concentra-se fortemente em cores quentes e dessaturadas, dando um ar de desbotado, empoeirado. Quando se adiciona cores quentes, por conta da falta de saturação, obtém-se um efeito romântico, nostálgico, sonhador.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo não permite que usuário clique em botão já clicado
     if (document.getElementById("escola-cor-2").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -345,11 +326,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "A tipologia Art Nouveau é estilizada, elegante e com fontes extremamente decorativas, derivadas de formas orgânicas. Incluem acabamentos decorativos, “cinturas” altas ou baixas, formas triangulares e diagonais dos caracteres, ênfase nas partes superior ou inferior e linhas transversais angulosas";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-2").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -383,7 +361,7 @@ export class HistoriadorPage {
     }
   }
 
-// -------------- BAUHAUS --------------
+  // -------------- BAUHAUS --------------
   exibeDialogoBauhaus() {
     if (this.bonecoAcordado) {
       var jose = document.getElementById('jose');
@@ -393,11 +371,7 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "Bauhaus foi a primeira escola de Design do mundo. Ela surgiu na Alemanha e é uma das maiores expressões do Modernismo. Características como um leque reduzido de cores, uso de formas geométricas claras e simples e construção da informação visual dentro de um sistema rígido (grid) foram aplicadas a problemas funcionais e à produção mecânica dentro da escola.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
-    }else{
+    } else {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML =
         "Bauhaus foi a primeira escola de Design do mundo. Ela surgiu na Alemanha e é uma das maiores expressões do Modernismo. Características como um leque reduzido de cores, uso de formas geométricas claras e simples e construção da informação visual dentro de um sistema rígido (grid) foram aplicadas a problemas funcionais e à produção mecânica dentro da escola.";
@@ -410,11 +384,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "No layout as formas primárias geométricas definem-se como elementos dinâmicos, bordas que são ultrapassadas e linhas firmes.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-3").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -454,11 +425,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "Forte uso das cores primárias e vibrantes eram tomadas como ponto de partida para qualquer produção. As cores também eram representadas pelas formas primárias (vermelho = quadrado, triângulo = amarelo, azul = circulo).";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-3").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -481,7 +449,6 @@ export class HistoriadorPage {
       this.fadeOut(velhoObjetoDeEstudo, 1);
       this.fadeIn(novoObjetoDeEstudo, 1);
 
-
       this.botaoDeCorAtivo = [0, 0, 1, 0];
       for (var i = 0; i < this.botaoDeCorAtivo.length; i++) {
         if (this.botaoDeCorAtivo[i] !== 1) {
@@ -499,11 +466,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "A Bauhaus utiliza de uma tipografia mais moderna, enxuta e precisa, com princípios do construtivismo. Mistura versões condensadas e expandidas de fontes góticas e sem serifa.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-3").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -537,7 +501,7 @@ export class HistoriadorPage {
     }
   }
 
-// -------------- POP ART --------------
+  // -------------- POP ART --------------
   exibeDialogoPopArt() {
     if (this.bonecoAcordado) {
       var jose = document.getElementById('jose');
@@ -547,15 +511,10 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "O Pop Art surge em meados de 1950, na Inglaterra, mas alcança sua maior fama nos Estados Unidos em 1960. O movimento buscava unir a familiaridade da sociedade com a cultura de consumo e de massa. O resultado eram imagens que documentavam, ao mesmo tempo que parodiavam, conceitos familiares dos Estados Unidos modernos.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
-    }else{
+    } else {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML =
         "O Pop Art surge em meados de 1950, na Inglaterra, mas alcança sua maior fama nos Estados Unidos em 1960. O movimento buscava unir a familiaridade da sociedade com a cultura de consumo e de massa. O resultado eram imagens que documentavam, ao mesmo tempo que parodiavam, conceitos familiares dos Estados Unidos modernos.";
-
     }
   }
 
@@ -565,11 +524,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "O layout traz a estética dos quadrinhos que o artista Roy Lichtenstein usava como uma forma de criticar a cultura de massas, o consumismo e a economia doméstica.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-4").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -609,11 +565,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "O design pop inspirava-se nas cores do arco íris: saturadas e contrastantes. Tons vibrantes para criar deliberadamente efeitos ópticos dissonantes.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-4").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -653,11 +606,8 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "A tipografia Pop Art geralmente eram manuscritos, posteriormente com referências ao Art Nouveau, até mesmo psicodélicos. Chamativa, principalmente ligada ao consumismo e à venda exagerada.";
-      /*
-      var typing = Typing(texto);
-      typing();
-      */
     }
+
     // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-4").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
@@ -691,12 +641,10 @@ export class HistoriadorPage {
     }
   }
 
-// José Carlos mimimamedezim
+  // Personagem parceiro do discurso
   desapareceBalao() {
-    if(document.getElementById("balaoDeDialogo").innerHTML.trim()!=""){
-      // console.log('antes do clique: ' + this.bonecoAcordado);
+    if (document.getElementById("balaoDeDialogo").innerHTML.trim() != "") {
       this.bonecoAcordado = !this.bonecoAcordado;
-      //console.log('após o clique: ' + this.bonecoAcordado);
       if (!this.bonecoAcordado) {
         var jose = document.getElementById('jose');
         jose.className = "jose dormindo";
@@ -726,7 +674,7 @@ export class HistoriadorPage {
       balaoDeDialogo.style.opacity = "1";
       balaoDeDialogo.innerHTML =
         "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
-    }else{
+    } else {
       var balaoDeDialogo = document.getElementById('balaoDeDialogo');
       balaoDeDialogo.innerHTML =
         "Hmmm, você gostou desta combinação de cores? Quais escolas você consegue consegue identificar?";
@@ -758,17 +706,17 @@ export class HistoriadorPage {
     this.fadeOut(velhoObjetoDeEstudo, 1);
     this.fadeIn(novoObjetoDeEstudo, 1);
 
-    switch(this.caracteristicas[0]) {
-      case "D" :
+    switch (this.caracteristicas[0]) {
+      case "D":
         this.botaoDeLayoutAtivo = [1, 0, 0, 0];
         break;
-      case "Nv" :
+      case "Nv":
         this.botaoDeLayoutAtivo = [0, 1, 0, 0];
         break;
-      case "B" :
+      case "B":
         this.botaoDeLayoutAtivo = [0, 0, 1, 0];
         break;
-      case "P" :
+      case "P":
         this.botaoDeLayoutAtivo = [0, 0, 0, 1];
         break;
       case "N":
@@ -776,17 +724,17 @@ export class HistoriadorPage {
         break;
     }
 
-    switch(this.caracteristicas[1]) {
-      case "D" :
+    switch (this.caracteristicas[1]) {
+      case "D":
         this.botaoDeCorAtivo = [1, 0, 0, 0];
         break;
-      case "Nv" :
+      case "Nv":
         this.botaoDeCorAtivo = [0, 1, 0, 0];
         break;
-      case "B" :
+      case "B":
         this.botaoDeCorAtivo = [0, 0, 1, 0];
         break;
-      case "P" :
+      case "P":
         this.botaoDeCorAtivo = [0, 0, 0, 1];
         break;
       case "N":
@@ -794,17 +742,17 @@ export class HistoriadorPage {
         break;
     }
 
-    switch(this.caracteristicas[2]) {
-      case "D" :
+    switch (this.caracteristicas[2]) {
+      case "D":
         this.botaoDeTipografiaAtivo = [1, 0, 0, 0];
         break;
-      case "Nv" :
+      case "Nv":
         this.botaoDeTipografiaAtivo = [0, 1, 0, 0];
         break;
-      case "B" :
+      case "B":
         this.botaoDeTipografiaAtivo = [0, 0, 1, 0];
         break;
-      case "P" :
+      case "P":
         this.botaoDeTipografiaAtivo = [0, 0, 0, 1];
         break;
       case "N":
@@ -839,13 +787,13 @@ export class HistoriadorPage {
   }
 
   fadeIn(element, time) {
-    if(element.style.opacity==0 || element.style.opacity==1){
+    if (element.style.opacity == 0 || element.style.opacity == 1) {
       this.processa(element, time, 0, 100);
     }
   }
 
   fadeOut(element, time) {
-    if(element.style.opacity==0 || element.style.opacity==1){
+    if (element.style.opacity == 0 || element.style.opacity == 1) {
       this.processa(element, time, 100, 0);
 
     }
@@ -856,7 +804,7 @@ export class HistoriadorPage {
     if (initial == 0) {
       increment = 2;
       element.style.display = "block";
-    } else{
+    } else {
       increment = -2;
     }
 
@@ -897,7 +845,6 @@ export class HistoriadorPage {
         {
           text: 'Cancelar',
           handler: () => {
-            //console.log('Disagree clicked');
           }
         },
         {
@@ -905,16 +852,10 @@ export class HistoriadorPage {
           handler: () => {
             this.carregaLayoutNormal();
             this.desselecionaBotoes();
-
           }
         }
       ]
     });
-
-
     confirm.present();
   }
-
-
-
 }

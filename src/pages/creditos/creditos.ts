@@ -14,6 +14,7 @@ export class CreditosPage {
   constructor(public navCtrl: NavController) {
   }
 
+  // Função para voltar para a tela inicial do infográfico
   voltarPaginaInicial() {
     this.navCtrl.push(this.homePage);
   }

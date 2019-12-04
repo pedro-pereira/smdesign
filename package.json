@@ -1,8 +1,8 @@
 {
   "name": "smdesign",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://pedro-pereira.github.io/smdesign/",
+  "author": "Equipe Nox",
+  "homepage": "http://projeto-smd.herokuapp.com",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -43,5 +43,5 @@
     "@ionic/app-scripts": "3.2.2",
     "typescript": "2.7.2"
   },
-  "description": "An Ionic project"
+  "description": "SMD - Saiba Mais Design"
 }

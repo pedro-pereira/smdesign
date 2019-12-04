@@ -13,7 +13,6 @@ export class HomePage {
   creditosPage: any = CreditosPage;
 
   constructor(public navCtrl: NavController) {
-
   }
 
   abrirAplicacao() {

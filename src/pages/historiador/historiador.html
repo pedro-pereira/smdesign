@@ -1,18 +1,5 @@
 <ion-content padding>
 
-  <!-- Teste de mouseFlow quando subir para site -->
-  <!--
-  <script type="text/javascript">
-    window._mfq = window._mfq || [];
-    (function () {
-      var mf = document.createElement("script");
-      mf.type = "text/javascript"; mf.async = true;
-      mf.src = "//cdn.mouseflow.com/projects/a66f8894-535d-47b9-9065-806d3b2faac8.js";
-      document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
-  </script>
-  -->
-
   <div class="botao-voltar-div">
     <button (click)="voltarPaginaInicial()" style="background: transparent;">
       <ion-icon class="botaoVoltar"></ion-icon>
@@ -23,6 +10,8 @@
     <ion-row>
       <ion-col col-1 style="max-height: 80vh">
         <ion-grid id="gridDeBotoes">
+
+          <!-- Linha com o botão da escola "Art Deco" -->
           <ion-row id="linha01">
             <ion-col id="celulaBotaoArtDeco">
               <div class="divComFab">
@@ -58,6 +47,7 @@
                       <span class="tooltiptext">Layout</span>
                     </div>
                   </ion-fab-list>
+
                 </ion-fab>
               </div>
               <br>
@@ -66,6 +56,7 @@
             </ion-col>
           </ion-row>
 
+          <!-- Linha com o botão da escola "Art Noveau" -->
           <ion-row id="linha02">
             <ion-col id="celulaBotaoArtNoveau">
               <div class="divComFab">
@@ -111,6 +102,7 @@
             </ion-col>
           </ion-row>
 
+          <!-- Linha com o botão da escola "Bauhaus" -->
           <ion-row id="linha03">
             <ion-col id="celulaBotaoBauhaus">
               <div class="divComFab">
@@ -146,6 +138,7 @@
                       <span class="tooltiptext">Layout</span>
                     </div>
                   </ion-fab-list>
+
                 </ion-fab>
               </div>
               <br>
@@ -154,6 +147,7 @@
             </ion-col>
           </ion-row>
 
+          <!-- Linha com o botão da escola "Pop Art" -->
           <ion-row id="linha04">
             <ion-col id="celulaBotaoPopArt">
               <div class="divComFab">
@@ -189,57 +183,26 @@
                       <span class="tooltiptext">Layout</span>
                     </div>
                   </ion-fab-list>
+
                 </ion-fab>
               </div>
             </ion-col>
           </ion-row>
-
-          <!--
-          <ion-row id="linha05">
-            <div style="margin-top: 45px; border: none;">
-              <ion-col id="celulaBotaoReiniciar">
-                <div class="tooltip">
-                  <button (click)="carregaLayoutNormal()" style="background-color: transparent;">
-                    <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
-                  </button>
-                  <span class="tooltiptext">Reiniciar</span>
-                </div>
-              </ion-col>
-              <ion-col id="celulaBotaoAleatorio">
-                <div class="tooltip">
-                  <button (click)="geraModoAleatorio()" style="background-color: transparent;">
-                    <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
-                  </button>
-                  <span class="tooltiptext">Modo Aleatório</span>
-                </div>
-              </ion-col>
-              <ion-col id="celulaBotaoGaleria">
-                <div class="tooltip">
-                  <button (click)="abrirGaleria()" style="background-color: transparent;">
-                    <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
-                  </button>
-                  <span class="tooltiptext">Galeria</span>
-                </div>
-              </ion-col>
-            </div>
-          </ion-row>
-        -->
         </ion-grid>
       </ion-col>
+
+      <!-- Espaço reservado para o tablet (objeto de estudo) -->
       <ion-col col-11>
         <ion-grid id="gridDeEstudo">
           <ion-row id="linha01">
             <ion-col>
               <div id="objetoDeEstudo" class="objetoDeEstudo flex-container " onload="carregaLayoutNormal()">
-                <img id = "imagem1" class = "NNN">
-                <img id = "imagem2" class = "NNN" style = "opacity: 0;" >
+                <img id="imagem1" class="NNN">
+                <img id="imagem2" class="NNN" style="opacity: 0;">
               </div>
               <div id="divJose">
-                <div id="balaoDeDialogo" class="balaoDeDialogo shadow"><p></p>
-                  <!--
-                  <span id="text"></span>
-                  <span id="blinker">|</span>
-                  -->
+                <div id="balaoDeDialogo" class="balaoDeDialogo shadow">
+                  <p></p>
                 </div>
                 <div id="jose" class="jose explicando" (click)="desapareceBalao()"></div>
               </div>
@@ -250,32 +213,32 @@
     </ion-row>
   </ion-grid>
 
-  <div class = "divBotoesInferiores">
-        <ion-col id="celulaBotaoReiniciar">
-          <div class="tooltip">
-            <button (click)="recarregaAplicacao()" style="background-color: transparent;">
-              <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
-            </button>
-            <span class="tooltiptext">Reiniciar</span>
-          </div>
-        </ion-col>
-        <ion-col id="celulaBotaoAleatorio">
-          <div class="tooltip">
-            <button (click)="geraModoAleatorio()" style="background-color: transparent;">
-              <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
-            </button>
-            <span class="tooltiptext">Modo Aleatório</span>
-          </div>
-        </ion-col>
-        <ion-col id="celulaBotaoGaleria">
-          <div class="tooltip">
-            <button (click)="abrirGaleria()" style="background-color: transparent;">
-              <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
-            </button>
-            <span class="tooltiptext">Galeria</span>
-          </div>
-        </ion-col>
+  <!-- Seção com os botões do "rodapé" -->
+  <div class="divBotoesInferiores">
+    <ion-col id="celulaBotaoReiniciar">
+      <div class="tooltip">
+        <button (click)="recarregaAplicacao()" style="background-color: transparent;">
+          <ion-icon class="botaoReiniciar botaoCelula"></ion-icon>
+        </button>
+        <span class="tooltiptext">Reiniciar</span>
       </div>
-
+    </ion-col>
+    <ion-col id="celulaBotaoAleatorio">
+      <div class="tooltip">
+        <button (click)="geraModoAleatorio()" style="background-color: transparent;">
+          <ion-icon class="botaoAleatorio botaoCelula"></ion-icon>
+        </button>
+        <span class="tooltiptext">Modo Aleatório</span>
+      </div>
+    </ion-col>
+    <ion-col id="celulaBotaoGaleria">
+      <div class="tooltip">
+        <button (click)="abrirGaleria()" style="background-color: transparent;">
+          <ion-icon class="botaoGaleria botaoCelula"></ion-icon>
+        </button>
+        <span class="tooltiptext">Galeria</span>
+      </div>
+    </ion-col>
+  </div>
 
 </ion-content>

@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -15,19 +14,23 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+// Fonte a ser usada nos textos da aplicação
 @font-face {
-    font-family: 'Champagne e Limousines';
-    src: url('../assets/fonts/champagne-e-limousines.ttf');
-  }
+  font-family: 'Champagne e Limousines';
+  src: url('../assets/fonts/champagne-e-limousines.ttf');
+}
 
+// Customizando a mensagem de alerta do botão "Reiniciar"
 .alert-md .alert-wrapper{
   font-family: "Champagne e Limousines";
   border-radius: 15px;
 }
+
 .alert-md .alert-title {
   font-size: 25px;
   font-weight: 900!important;
 }
+
 .alert-md .alert-message {
   max-height: 240px;
   font-size: 19px;

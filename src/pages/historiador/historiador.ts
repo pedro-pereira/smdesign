@@ -14,15 +14,42 @@ export class HistoriadorPage {
   galeriaPage: any = GaleriaPage;
 
   caracteristicas = ["N", "N", "N"];
+  
+  // Vetor que indica qual botão de cor de qual escola está selecionado
   botaoDeCorAtivo = [1, 1, 1, 1];
+
+  // Vetor que indica qual botão de tipografia de qual escola está selecionado
   botaoDeTipografiaAtivo = [1, 1, 1, 1];
+
+  // Vetor que indica qual botão de layout de qual escola está selecionado
   botaoDeLayoutAtivo = [1, 1, 1, 1];
+
+  // Indica se o personagem está habilitado ou não
   bonecoAcordado = true;
+
+  // Indica se é o primeiro clique em qualquer um dos botões
   primeiroClique = true;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
 
+  ionViewDidLoad() {
+    this.carregaLayoutNormal();
+  }
+
+  voltarPaginaInicial() {
+    this.navCtrl.setRoot(this.homePage);
+  }
+
+  abrirGaleria() {
+    this.navCtrl.setRoot(this.galeriaPage);
+  }
+
+  /* Função que exibe os botões de cor, tipo e layout 
+     com opacidade total (selecionado) ou opacidade parcial (não-selecionado).
+     Se o parâmetro for true, todo os botões aparecerão selecionados; 
+     Se for false, todos os botões aparecerão não-selecionado.
+  */
   selecionaTodosOsBotoes(comando) {
     if (comando) {
       for (var i = 0; i < this.botaoDeLayoutAtivo.length; i++) {
@@ -51,22 +78,7 @@ export class HistoriadorPage {
     }
   }
 
-  ionViewDidLoad() {
-    this.carregaLayoutNormal();
-    // document.getElementById("balaoDeDialogo").style.opacity = "0";
-    // this.desselecionaBotoes();
-  }
-
-  voltarPaginaInicial() {
-    this.navCtrl.setRoot(this.homePage);
-  }
-
-  abrirGaleria() {
-    this.navCtrl.setRoot(this.galeriaPage);
-  }
-
   carregaLayoutNormal() {
-    // this.desselecionaBotoes();
     this.caracteristicas[0] = "N";
     this.caracteristicas[1] = "N";
     this.caracteristicas[2] = "N";
@@ -90,6 +102,8 @@ export class HistoriadorPage {
   }
 
   // -------------- ART DECO --------------
+
+  // Função para exibir mensagem ao clicar no botão "Art Deco"
   exibeDialogoArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -104,6 +118,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de layout da escola "Art Deco"
   aplicaLayoutArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -120,7 +135,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-1").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -153,6 +167,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de cor da escola "Art Deco"
   aplicaCorArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -169,7 +184,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-1").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -202,6 +216,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de tipografia da escola "Art Deco"
   aplicaFonteArtDeco() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -218,7 +233,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-1").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -266,6 +280,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de layout da escola "Art Noveau"
   aplicaLayoutArtNoveau() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML = "O layout Art Nouveau caracteriza-se pelo uso de ornamentos florais, traçados curvilíneos com fortes contornos como numa moldura. As flores, os arcos, as formas da natureza trazem a ideia de movimento às obras.";
@@ -281,7 +296,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-2").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -314,6 +328,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de cor da escola "Art Noveau"
   aplicaCorArtNoveau() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -330,7 +345,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo não permite que usuário clique em botão já clicado
     if (document.getElementById("escola-cor-2").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -363,6 +377,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de tipografia da escola "Art Noveau"
   aplicaFonteArtNoveau() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -379,7 +394,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-2").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -427,6 +441,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de layout da escola "Bauhaus"
   aplicaLayoutBauhaus() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -443,7 +458,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-3").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -476,6 +490,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de cor da escola "Bauhaus"
   aplicaCorBauhaus() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -492,7 +507,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-3").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -525,6 +539,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de tipografia da escola "Bauhaus"
   aplicaFonteBauhaus() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -541,7 +556,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-3").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -589,6 +603,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de layout da escola "Pop Art"
   aplicaLayoutPopArt() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -605,7 +620,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-layout-4").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -638,6 +652,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de cor da escola "Pop Art"
   aplicaCorPopArt() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -654,7 +669,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-cor-4").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -687,6 +701,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características de tipografia da escola "Pop Art"
   aplicaFontePopArt() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -703,7 +718,6 @@ export class HistoriadorPage {
       this.selecionaTodosOsBotoes(false);
     }
 
-    // Linha abaixo só permite clicar quando não já está clicado
     if (document.getElementById("escola-tipografia-4").style.opacity != "1") {
       var classeAntiga = this.caracteristicas[0] + this.caracteristicas[1] + this.caracteristicas[2];
 
@@ -736,7 +750,7 @@ export class HistoriadorPage {
     }
   }
 
-  // Personagem parceiro do discurso
+  //Função para habilitar/desabilitar o balão de diálogo do personagem.
   desapareceBalao() {
     if (document.getElementById("balaoDeDialogo").innerHTML.trim() != "") {
       this.bonecoAcordado = !this.bonecoAcordado;
@@ -763,6 +777,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função que aplica as características aleatórias da escolas
   geraModoAleatorio() {
     var balaoDeDialogo = document.getElementById('balaoDeDialogo');
     balaoDeDialogo.innerHTML =
@@ -877,12 +892,14 @@ export class HistoriadorPage {
     }
   }
 
+  // Função para controlar a transição entre imagens (aparecendo)
   fadeIn(element, time) {
     if (element.style.opacity == 0 || element.style.opacity == 1) {
       this.processa(element, time, 0, 100);
     }
   }
 
+  // Função para controlar a transição entre imagens (sumindo)
   fadeOut(element, time) {
     if (element.style.opacity == 0 || element.style.opacity == 1) {
       this.processa(element, time, 100, 0);
@@ -890,6 +907,7 @@ export class HistoriadorPage {
     }
   }
 
+  // Função para executar a transição entre imagens
   processa(element, time, initial, end) {
     var increment, opc, intervalo;
     if (initial == 0) {
@@ -917,6 +935,8 @@ export class HistoriadorPage {
     }, time * 50);
   }
 
+  // Função para recarregar as características orginais da tela
+  // Exibe uma mensagem de alerta antes de prosseguir o processo
   recarregaAplicacao() {
     const confirm = this.alertCtrl.create({
       title: 'Reiniciar o infográfico?',
@@ -939,17 +959,5 @@ export class HistoriadorPage {
     });
     confirm.present();
   }
-
-  /*
-  girarPersonagem(personagem) {
-    if (this.bonecoAcordado) {
-      var degrees = 0;
-      personagem.onclick = function () {
-        degrees += 1800;
-        personagem.style.webkitTransform = "rotateY(" + degrees + "deg) scale(0.3)";
-        personagem.style.transform = "rotateY(" + degrees + "deg) scale(0.3)";
-      }
-    }
-  }
-  */
+  
 }

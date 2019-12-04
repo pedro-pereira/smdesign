@@ -19,3 +19,27 @@
     font-family: 'Champagne e Limousines';
     src: url('../assets/fonts/champagne-e-limousines.ttf');
   }
+
+.alert-md .alert-wrapper{
+  font-family: "Champagne e Limousines";
+  border-radius: 15px;
+}
+.alert-md .alert-title {
+  font-size: 25px;
+  font-weight: 900!important;
+}
+.alert-md .alert-message {
+  max-height: 240px;
+  font-size: 19px;
+  color: #58585A;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.alert-md .alert-button .button-inner {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: #E67863;
+}

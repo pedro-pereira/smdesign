@@ -193,7 +193,7 @@ page-historiador {
   // ----------------------- HINT ----------------------- FIM ---
 
   .objetoDeEstudo {
-	  position: relative;
+    position: relative;
     left: 30px;
     width: auto;
     height: 93vh;
@@ -223,7 +223,7 @@ page-historiador {
     z-index: 1;
   }
 
-	#celulaBotaoGaleria {
+  #celulaBotaoGaleria {
     position: absolute;
     left: 13.5vw;
     z-index: 1;
@@ -265,13 +265,12 @@ page-historiador {
   }
 
   .jose {
-    position: relative;
+    position: absolute ;
     transform: scale(0.3);
     content: url("/assets/imgs/personagem/jose-explicando.png");
     cursor: pointer;
-    border-radius: 100%;
-    bottom: 307%;
-    right: -65%;
+    bottom: -240px;
+    right: -310px;
   }
 
   .explicando {
@@ -329,164 +328,164 @@ page-historiador {
 
   // ----------------------- PERSONAGEM JOSE ----------------------- FIM ---
 
-// ------------------------ NORMAL ------------------------
+  // ------------------------ NORMAL ------------------------
 
-.NNN  { content: url('/assets/imgs/combinacoes/neutro/NNN.png'); }
-.NND  { content: url('/assets/imgs/combinacoes/neutro/NND.png'); }
-.NNNv { content: url('/assets/imgs/combinacoes/neutro/NNNv.png');}
-.NNB  { content: url('/assets/imgs/combinacoes/neutro/NNB.png'); }
-.NNP  { content: url('/assets/imgs/combinacoes/neutro/NNP.png'); }
+  .NNN  { content: url('/assets/imgs/combinacoes/neutro/NNN.png'); }
+  .NND  { content: url('/assets/imgs/combinacoes/neutro/NND.png'); }
+  .NNNv { content: url('/assets/imgs/combinacoes/neutro/NNNv.png');}
+  .NNB  { content: url('/assets/imgs/combinacoes/neutro/NNB.png'); }
+  .NNP  { content: url('/assets/imgs/combinacoes/neutro/NNP.png'); }
 
-.NDN  { content: url('/assets/imgs/combinacoes/neutro/NDN.png'); }
-.NDD  { content: url('/assets/imgs/combinacoes/neutro/NDD.png'); }
-.NDNv { content: url('/assets/imgs/combinacoes/neutro/NDNv.png');}
-.NDB  { content: url('/assets/imgs/combinacoes/neutro/NDB.png'); }
-.NDP  { content: url('/assets/imgs/combinacoes/neutro/NDP.png'); }
+  .NDN  { content: url('/assets/imgs/combinacoes/neutro/NDN.png'); }
+  .NDD  { content: url('/assets/imgs/combinacoes/neutro/NDD.png'); }
+  .NDNv { content: url('/assets/imgs/combinacoes/neutro/NDNv.png');}
+  .NDB  { content: url('/assets/imgs/combinacoes/neutro/NDB.png'); }
+  .NDP  { content: url('/assets/imgs/combinacoes/neutro/NDP.png'); }
 
-.NNvN { content: url('/assets/imgs/combinacoes/neutro/NNvN.png'); }
-.NNvD { content: url('/assets/imgs/combinacoes/neutro/NNvD.png'); }
-.NNvNv{ content: url('/assets/imgs/combinacoes/neutro/NNvNv.png');}
-.NNvB { content: url('/assets/imgs/combinacoes/neutro/NNvB.png'); }
-.NNvP { content: url('/assets/imgs/combinacoes/neutro/NNvP.png'); }
+  .NNvN { content: url('/assets/imgs/combinacoes/neutro/NNvN.png'); }
+  .NNvD { content: url('/assets/imgs/combinacoes/neutro/NNvD.png'); }
+  .NNvNv{ content: url('/assets/imgs/combinacoes/neutro/NNvNv.png');}
+  .NNvB { content: url('/assets/imgs/combinacoes/neutro/NNvB.png'); }
+  .NNvP { content: url('/assets/imgs/combinacoes/neutro/NNvP.png'); }
 
-.NBN  { content: url('/assets/imgs/combinacoes/neutro/NBN.png'); }
-.NBD  { content: url('/assets/imgs/combinacoes/neutro/NBD.png'); }
-.NBNv { content: url('/assets/imgs/combinacoes/neutro/NBNv.png');}
-.NBB  { content: url('/assets/imgs/combinacoes/neutro/NBB.png'); }
-.NBP  { content: url('/assets/imgs/combinacoes/neutro/NBP.png'); }
+  .NBN  { content: url('/assets/imgs/combinacoes/neutro/NBN.png'); }
+  .NBD  { content: url('/assets/imgs/combinacoes/neutro/NBD.png'); }
+  .NBNv { content: url('/assets/imgs/combinacoes/neutro/NBNv.png');}
+  .NBB  { content: url('/assets/imgs/combinacoes/neutro/NBB.png'); }
+  .NBP  { content: url('/assets/imgs/combinacoes/neutro/NBP.png'); }
 
-.NPN  { content: url('/assets/imgs/combinacoes/neutro/NPN.png'); }
-.NPD  { content: url('/assets/imgs/combinacoes/neutro/NPD.png'); }
-.NPNv { content: url('/assets/imgs/combinacoes/neutro/NPNv.png');}
-.NPB  { content: url('/assets/imgs/combinacoes/neutro/NPB.png'); }
-.NPP  { content: url('/assets/imgs/combinacoes/neutro/NPP.png'); }
+  .NPN  { content: url('/assets/imgs/combinacoes/neutro/NPN.png'); }
+  .NPD  { content: url('/assets/imgs/combinacoes/neutro/NPD.png'); }
+  .NPNv { content: url('/assets/imgs/combinacoes/neutro/NPNv.png');}
+  .NPB  { content: url('/assets/imgs/combinacoes/neutro/NPB.png'); }
+  .NPP  { content: url('/assets/imgs/combinacoes/neutro/NPP.png'); }
 
-// ------------------------ DECO ------------------------
+  // ------------------------ DECO ------------------------
 
-.DNN  { content: url('/assets/imgs/combinacoes/deco/DNN.png'); }
-.DND  { content: url('/assets/imgs/combinacoes/deco/DND.png'); }
-.DNNv { content: url('/assets/imgs/combinacoes/deco/DNNv.png');}
-.DNB  { content: url('/assets/imgs/combinacoes/deco/DNB.png'); }
-.DNP  { content: url('/assets/imgs/combinacoes/deco/DNP.png'); }
+  .DNN  { content: url('/assets/imgs/combinacoes/deco/DNN.png'); }
+  .DND  { content: url('/assets/imgs/combinacoes/deco/DND.png'); }
+  .DNNv { content: url('/assets/imgs/combinacoes/deco/DNNv.png');}
+  .DNB  { content: url('/assets/imgs/combinacoes/deco/DNB.png'); }
+  .DNP  { content: url('/assets/imgs/combinacoes/deco/DNP.png'); }
 
-.DDN  { content: url('/assets/imgs/combinacoes/deco/DDN.png'); }
-.DDD  { content: url('/assets/imgs/combinacoes/deco/DDD.png'); }
-.DDNv { content: url('/assets/imgs/combinacoes/deco/DDNv.png');}
-.DDB  { content: url('/assets/imgs/combinacoes/deco/DDB.png'); }
-.DDP  { content: url('/assets/imgs/combinacoes/deco/DDP.png'); }
+  .DDN  { content: url('/assets/imgs/combinacoes/deco/DDN.png'); }
+  .DDD  { content: url('/assets/imgs/combinacoes/deco/DDD.png'); }
+  .DDNv { content: url('/assets/imgs/combinacoes/deco/DDNv.png');}
+  .DDB  { content: url('/assets/imgs/combinacoes/deco/DDB.png'); }
+  .DDP  { content: url('/assets/imgs/combinacoes/deco/DDP.png'); }
 
-.DNvN { content: url('/assets/imgs/combinacoes/deco/DNvN.png'); }
-.DNvD { content: url('/assets/imgs/combinacoes/deco/DNvD.png'); }
-.DNvNv{ content: url('/assets/imgs/combinacoes/deco/DNvNv.png');}
-.DNvB { content: url('/assets/imgs/combinacoes/deco/DNvB.png'); }
-.DNvP { content: url('/assets/imgs/combinacoes/deco/DNvP.png'); }
+  .DNvN { content: url('/assets/imgs/combinacoes/deco/DNvN.png'); }
+  .DNvD { content: url('/assets/imgs/combinacoes/deco/DNvD.png'); }
+  .DNvNv{ content: url('/assets/imgs/combinacoes/deco/DNvNv.png');}
+  .DNvB { content: url('/assets/imgs/combinacoes/deco/DNvB.png'); }
+  .DNvP { content: url('/assets/imgs/combinacoes/deco/DNvP.png'); }
 
-.DBN  { content: url('/assets/imgs/combinacoes/deco/DBN.png'); }
-.DBD  { content: url('/assets/imgs/combinacoes/deco/DBD.png'); }
-.DBNv { content: url('/assets/imgs/combinacoes/deco/DBNv.png');}
-.DBB  { content: url('/assets/imgs/combinacoes/deco/DBB.png'); }
-.DBP  { content: url('/assets/imgs/combinacoes/deco/DBP.png'); }
+  .DBN  { content: url('/assets/imgs/combinacoes/deco/DBN.png'); }
+  .DBD  { content: url('/assets/imgs/combinacoes/deco/DBD.png'); }
+  .DBNv { content: url('/assets/imgs/combinacoes/deco/DBNv.png');}
+  .DBB  { content: url('/assets/imgs/combinacoes/deco/DBB.png'); }
+  .DBP  { content: url('/assets/imgs/combinacoes/deco/DBP.png'); }
 
-.DPN  { content: url('/assets/imgs/combinacoes/deco/DPN.png'); }
-.DPD  { content: url('/assets/imgs/combinacoes/deco/DPD.png'); }
-.DPNv { content: url('/assets/imgs/combinacoes/deco/DPNv.png');}
-.DPB  { content: url('/assets/imgs/combinacoes/deco/DPB.png'); }
-.DPP  { content: url('/assets/imgs/combinacoes/deco/DPP.png'); }
+  .DPN  { content: url('/assets/imgs/combinacoes/deco/DPN.png'); }
+  .DPD  { content: url('/assets/imgs/combinacoes/deco/DPD.png'); }
+  .DPNv { content: url('/assets/imgs/combinacoes/deco/DPNv.png');}
+  .DPB  { content: url('/assets/imgs/combinacoes/deco/DPB.png'); }
+  .DPP  { content: url('/assets/imgs/combinacoes/deco/DPP.png'); }
 
-// ------------------------ NOVEAU ------------------------
+  // ------------------------ NOVEAU ------------------------
 
- .NvNN { content: url('/assets/imgs/combinacoes/noveau/NvNN.png'); }
- .NvND { content: url('/assets/imgs/combinacoes/noveau/NvND.png'); }
- .NvNNv{ content: url('/assets/imgs/combinacoes/noveau/NvNNv.png');}
- .NvNB { content: url('/assets/imgs/combinacoes/noveau/NvNB.png'); }
- .NvNP { content: url('/assets/imgs/combinacoes/noveau/NvNP.png'); }
+  .NvNN { content: url('/assets/imgs/combinacoes/noveau/NvNN.png'); }
+  .NvND { content: url('/assets/imgs/combinacoes/noveau/NvND.png'); }
+  .NvNNv{ content: url('/assets/imgs/combinacoes/noveau/NvNNv.png');}
+  .NvNB { content: url('/assets/imgs/combinacoes/noveau/NvNB.png'); }
+  .NvNP { content: url('/assets/imgs/combinacoes/noveau/NvNP.png'); }
 
- .NvDN { content: url('/assets/imgs/combinacoes/noveau/NvDN.png'); }
- .NvDD { content: url('/assets/imgs/combinacoes/noveau/NvDD.png'); }
- .NvDNv{ content: url('/assets/imgs/combinacoes/noveau/NvDNv.png');}
- .NvDB { content: url('/assets/imgs/combinacoes/noveau/NvDB.png'); }
- .NvDP { content: url('/assets/imgs/combinacoes/noveau/NvDP.png'); }
+  .NvDN { content: url('/assets/imgs/combinacoes/noveau/NvDN.png'); }
+  .NvDD { content: url('/assets/imgs/combinacoes/noveau/NvDD.png'); }
+  .NvDNv{ content: url('/assets/imgs/combinacoes/noveau/NvDNv.png');}
+  .NvDB { content: url('/assets/imgs/combinacoes/noveau/NvDB.png'); }
+  .NvDP { content: url('/assets/imgs/combinacoes/noveau/NvDP.png'); }
 
- .NvNvN { content: url('/assets/imgs/combinacoes/noveau/NvNvN.png'); }
- .NvNvD { content: url('/assets/imgs/combinacoes/noveau/NvNvD.png'); }
- .NvNvNv{ content: url('/assets/imgs/combinacoes/noveau/NvNvNv.png');}
- .NvNvB { content: url('/assets/imgs/combinacoes/noveau/NvNvB.png'); }
- .NvNvP { content: url('/assets/imgs/combinacoes/noveau/NvNvP.png'); }
+  .NvNvN { content: url('/assets/imgs/combinacoes/noveau/NvNvN.png'); }
+  .NvNvD { content: url('/assets/imgs/combinacoes/noveau/NvNvD.png'); }
+  .NvNvNv{ content: url('/assets/imgs/combinacoes/noveau/NvNvNv.png');}
+  .NvNvB { content: url('/assets/imgs/combinacoes/noveau/NvNvB.png'); }
+  .NvNvP { content: url('/assets/imgs/combinacoes/noveau/NvNvP.png'); }
 
- .NvBN  { content: url('/assets/imgs/combinacoes/noveau/NvBN.png'); }
- .NvBD  { content: url('/assets/imgs/combinacoes/noveau/NvBD.png'); }
- .NvBNv { content: url('/assets/imgs/combinacoes/noveau/NvBNv.png');}
- .NvBB  { content: url('/assets/imgs/combinacoes/noveau/NvBB.png'); }
- .NvBP  { content: url('/assets/imgs/combinacoes/noveau/NvBP.png'); }
+  .NvBN  { content: url('/assets/imgs/combinacoes/noveau/NvBN.png'); }
+  .NvBD  { content: url('/assets/imgs/combinacoes/noveau/NvBD.png'); }
+  .NvBNv { content: url('/assets/imgs/combinacoes/noveau/NvBNv.png');}
+  .NvBB  { content: url('/assets/imgs/combinacoes/noveau/NvBB.png'); }
+  .NvBP  { content: url('/assets/imgs/combinacoes/noveau/NvBP.png'); }
 
- .NvPN  { content: url('/assets/imgs/combinacoes/noveau/NvPN.png'); }
- .NvPD  { content: url('/assets/imgs/combinacoes/noveau/NvPD.png'); }
- .NvPNv { content: url('/assets/imgs/combinacoes/noveau/NvPNv.png');}
- .NvPB  { content: url('/assets/imgs/combinacoes/noveau/NvPB.png'); }
- .NvPP  { content: url('/assets/imgs/combinacoes/noveau/NvPP.png'); }
+  .NvPN  { content: url('/assets/imgs/combinacoes/noveau/NvPN.png'); }
+  .NvPD  { content: url('/assets/imgs/combinacoes/noveau/NvPD.png'); }
+  .NvPNv { content: url('/assets/imgs/combinacoes/noveau/NvPNv.png');}
+  .NvPB  { content: url('/assets/imgs/combinacoes/noveau/NvPB.png'); }
+  .NvPP  { content: url('/assets/imgs/combinacoes/noveau/NvPP.png'); }
 
-// ------------------------ BAUHAUS ------------------------
+  // ------------------------ BAUHAUS ------------------------
 
- .BNN  { content: url('/assets/imgs/combinacoes/bauhaus/BNN.png'); }
- .BND  { content: url('/assets/imgs/combinacoes/bauhaus/BND.png'); }
- .BNNv { content: url('/assets/imgs/combinacoes/bauhaus/BNNv.png');}
- .BNB  { content: url('/assets/imgs/combinacoes/bauhaus/BNB.png'); }
- .BNP  { content: url('/assets/imgs/combinacoes/bauhaus/BNP.png'); }
+  .BNN  { content: url('/assets/imgs/combinacoes/bauhaus/BNN.png'); }
+  .BND  { content: url('/assets/imgs/combinacoes/bauhaus/BND.png'); }
+  .BNNv { content: url('/assets/imgs/combinacoes/bauhaus/BNNv.png');}
+  .BNB  { content: url('/assets/imgs/combinacoes/bauhaus/BNB.png'); }
+  .BNP  { content: url('/assets/imgs/combinacoes/bauhaus/BNP.png'); }
 
- .BDN  { content: url('/assets/imgs/combinacoes/bauhaus/BDN.png'); }
- .BDD  { content: url('/assets/imgs/combinacoes/bauhaus/BDD.png'); }
- .BDNv { content: url('/assets/imgs/combinacoes/bauhaus/BDNv.png');}
- .BDB  { content: url('/assets/imgs/combinacoes/bauhaus/BDB.png'); }
- .BDP  { content: url('/assets/imgs/combinacoes/bauhaus/BDP.png'); }
+  .BDN  { content: url('/assets/imgs/combinacoes/bauhaus/BDN.png'); }
+  .BDD  { content: url('/assets/imgs/combinacoes/bauhaus/BDD.png'); }
+  .BDNv { content: url('/assets/imgs/combinacoes/bauhaus/BDNv.png');}
+  .BDB  { content: url('/assets/imgs/combinacoes/bauhaus/BDB.png'); }
+  .BDP  { content: url('/assets/imgs/combinacoes/bauhaus/BDP.png'); }
 
- .BNvN { content: url('/assets/imgs/combinacoes/bauhaus/BNvN.png'); }
- .BNvD { content: url('/assets/imgs/combinacoes/bauhaus/BNvD.png'); }
- .BNvNv{ content: url('/assets/imgs/combinacoes/bauhaus/BNvNv.png');}
- .BNvB { content: url('/assets/imgs/combinacoes/bauhaus/BNvB.png'); }
- .BNvP { content: url('/assets/imgs/combinacoes/bauhaus/BNvP.png'); }
+  .BNvN { content: url('/assets/imgs/combinacoes/bauhaus/BNvN.png'); }
+  .BNvD { content: url('/assets/imgs/combinacoes/bauhaus/BNvD.png'); }
+  .BNvNv{ content: url('/assets/imgs/combinacoes/bauhaus/BNvNv.png');}
+  .BNvB { content: url('/assets/imgs/combinacoes/bauhaus/BNvB.png'); }
+  .BNvP { content: url('/assets/imgs/combinacoes/bauhaus/BNvP.png'); }
 
- .BBN  { content: url('/assets/imgs/combinacoes/bauhaus/BBN.png'); }
- .BBD  { content: url('/assets/imgs/combinacoes/bauhaus/BBD.png'); }
- .BBNv { content: url('/assets/imgs/combinacoes/bauhaus/BBNv.png');}
- .BBB  { content: url('/assets/imgs/combinacoes/bauhaus/BBB.png'); }
- .BBP  { content: url('/assets/imgs/combinacoes/bauhaus/BBP.png'); }
+  .BBN  { content: url('/assets/imgs/combinacoes/bauhaus/BBN.png'); }
+  .BBD  { content: url('/assets/imgs/combinacoes/bauhaus/BBD.png'); }
+  .BBNv { content: url('/assets/imgs/combinacoes/bauhaus/BBNv.png');}
+  .BBB  { content: url('/assets/imgs/combinacoes/bauhaus/BBB.png'); }
+  .BBP  { content: url('/assets/imgs/combinacoes/bauhaus/BBP.png'); }
 
- .BPN  { content: url('/assets/imgs/combinacoes/bauhaus/BPN.png'); }
- .BPD  { content: url('/assets/imgs/combinacoes/bauhaus/BPD.png'); }
- .BPNv { content: url('/assets/imgs/combinacoes/bauhaus/BPNv.png');}
- .BPB  { content: url('/assets/imgs/combinacoes/bauhaus/BPB.png'); }
- .BPP  { content: url('/assets/imgs/combinacoes/bauhaus/BPP.png'); }
+  .BPN  { content: url('/assets/imgs/combinacoes/bauhaus/BPN.png'); }
+  .BPD  { content: url('/assets/imgs/combinacoes/bauhaus/BPD.png'); }
+  .BPNv { content: url('/assets/imgs/combinacoes/bauhaus/BPNv.png');}
+  .BPB  { content: url('/assets/imgs/combinacoes/bauhaus/BPB.png'); }
+  .BPP  { content: url('/assets/imgs/combinacoes/bauhaus/BPP.png'); }
 
-// ------------------------ POP ART ------------------------
+  // ------------------------ POP ART ------------------------
 
- .PNN  { content: url('/assets/imgs/combinacoes/pop-art/PNN.png'); }
- .PND  { content: url('/assets/imgs/combinacoes/pop-art/PND.png'); }
- .PNNv { content: url('/assets/imgs/combinacoes/pop-art/PNNv.png');}
- .PNB  { content: url('/assets/imgs/combinacoes/pop-art/PNB.png'); }
- .PNP  { content: url('/assets/imgs/combinacoes/pop-art/PNP.png'); }
+  .PNN  { content: url('/assets/imgs/combinacoes/pop-art/PNN.png'); }
+  .PND  { content: url('/assets/imgs/combinacoes/pop-art/PND.png'); }
+  .PNNv { content: url('/assets/imgs/combinacoes/pop-art/PNNv.png');}
+  .PNB  { content: url('/assets/imgs/combinacoes/pop-art/PNB.png'); }
+  .PNP  { content: url('/assets/imgs/combinacoes/pop-art/PNP.png'); }
 
- .PDN  { content: url('/assets/imgs/combinacoes/pop-art/PDN.png'); }
- .PDD  { content: url('/assets/imgs/combinacoes/pop-art/PDD.png'); }
- .PDNv { content: url('/assets/imgs/combinacoes/pop-art/PDNv.png');}
- .PDB  { content: url('/assets/imgs/combinacoes/pop-art/PDB.png'); }
- .PDP  { content: url('/assets/imgs/combinacoes/pop-art/PDP.png'); }
+  .PDN  { content: url('/assets/imgs/combinacoes/pop-art/PDN.png'); }
+  .PDD  { content: url('/assets/imgs/combinacoes/pop-art/PDD.png'); }
+  .PDNv { content: url('/assets/imgs/combinacoes/pop-art/PDNv.png');}
+  .PDB  { content: url('/assets/imgs/combinacoes/pop-art/PDB.png'); }
+  .PDP  { content: url('/assets/imgs/combinacoes/pop-art/PDP.png'); }
 
- .PNvN { content: url('/assets/imgs/combinacoes/pop-art/PNvN.png'); }
- .PNvD { content: url('/assets/imgs/combinacoes/pop-art/PNvD.png'); }
- .PNvNv{ content: url('/assets/imgs/combinacoes/pop-art/PNvNv.png');}
- .PNvB { content: url('/assets/imgs/combinacoes/pop-art/PNvB.png'); }
- .PNvP { content: url('/assets/imgs/combinacoes/pop-art/PNvP.png'); }
+  .PNvN { content: url('/assets/imgs/combinacoes/pop-art/PNvN.png'); }
+  .PNvD { content: url('/assets/imgs/combinacoes/pop-art/PNvD.png'); }
+  .PNvNv{ content: url('/assets/imgs/combinacoes/pop-art/PNvNv.png');}
+  .PNvB { content: url('/assets/imgs/combinacoes/pop-art/PNvB.png'); }
+  .PNvP { content: url('/assets/imgs/combinacoes/pop-art/PNvP.png'); }
 
- .PBN  { content: url('/assets/imgs/combinacoes/pop-art/PBN.png'); }
- .PBD  { content: url('/assets/imgs/combinacoes/pop-art/PBD.png'); }
- .PBNv { content: url('/assets/imgs/combinacoes/pop-art/PBNv.png');}
- .PBB  { content: url('/assets/imgs/combinacoes/pop-art/PBB.png'); }
- .PBP  { content: url('/assets/imgs/combinacoes/pop-art/PBP.png'); }
+  .PBN  { content: url('/assets/imgs/combinacoes/pop-art/PBN.png'); }
+  .PBD  { content: url('/assets/imgs/combinacoes/pop-art/PBD.png'); }
+  .PBNv { content: url('/assets/imgs/combinacoes/pop-art/PBNv.png');}
+  .PBB  { content: url('/assets/imgs/combinacoes/pop-art/PBB.png'); }
+  .PBP  { content: url('/assets/imgs/combinacoes/pop-art/PBP.png'); }
 
- .PPN  { content: url('/assets/imgs/combinacoes/pop-art/PPN.png'); }
- .PPD  { content: url('/assets/imgs/combinacoes/pop-art/PPD.png'); }
- .PPNv { content: url('/assets/imgs/combinacoes/pop-art/PPNv.png');}
- .PPB  { content: url('/assets/imgs/combinacoes/pop-art/PPB.png'); }
- .PPP  { content: url('/assets/imgs/combinacoes/pop-art/PPP.png'); }
+  .PPN  { content: url('/assets/imgs/combinacoes/pop-art/PPN.png'); }
+  .PPD  { content: url('/assets/imgs/combinacoes/pop-art/PPD.png'); }
+  .PPNv { content: url('/assets/imgs/combinacoes/pop-art/PPNv.png');}
+  .PPB  { content: url('/assets/imgs/combinacoes/pop-art/PPB.png'); }
+  .PPP  { content: url('/assets/imgs/combinacoes/pop-art/PPP.png'); }
 
 }
